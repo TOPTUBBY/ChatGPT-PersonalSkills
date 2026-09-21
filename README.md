@@ -2,12 +2,12 @@
 
 # 🧩 ChatGPT-CodexSkills
 
-**Reusable Codex skills for consistent, professional project workflows**
+**Reusable Codex skills for engineering, software, documentation, and technical workflows**
 
-**ชุดทักษะ Codex ที่นำกลับมาใช้ซ้ำได้ เพื่อให้งานแต่ละโปรเจกต์มีคุณภาพและรูปแบบสม่ำเสมอ**
+**ชุดทักษะ Codex ที่นำกลับมาใช้ซ้ำได้ สำหรับงานวิศวกรรม ซอฟต์แวร์ เอกสาร และการแก้ปัญหาเชิงเทคนิค**
 
 [![Codex](https://img.shields.io/badge/Codex-Compatible-111827?style=for-the-badge)](https://developers.openai.com/codex/skills/)
-[![Skills](https://img.shields.io/badge/Skills-1-2563EB?style=for-the-badge)](#available-skills)
+[![Skills](https://img.shields.io/badge/Skills-14-2563EB?style=for-the-badge)](#available-skills)
 [![License](https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Active-0EA5E9?style=for-the-badge)](#repository-status)
 
@@ -23,71 +23,77 @@
 
 ### Overview
 
-ChatGPT-CodexSkills is a public collection of reusable skills for ChatGPT and Codex. Each skill packages focused instructions and supporting resources so recurring workflows can be performed consistently across projects and computers.
+ChatGPT-CodexSkills is a version-controlled collection of reusable skills distilled from recurring engineering, lab, embedded, software, Linux, automation, documentation, and troubleshooting workflows.
 
-The repository currently includes a professional README authoring skill based on the documentation style developed for the DataPEA and ADTD projects.
+The skills are intentionally written as reusable operating procedures rather than project dumps. Public files exclude credentials, private account information, salary data, customer sample logistics, device serial numbers, and unnecessary internal project identifiers.
 
-### Why this repository exists
+### Design principles
 
-- 📚 Keep reusable workflows in one version-controlled location.
-- 🔁 Apply the same quality standard across future projects.
-- 💻 Make personal skills easy to install on another computer.
-- 🤝 Share improvements through normal Git collaboration.
-- 🔒 Publish instructions and templates without project secrets or internal data.
+- **Evidence before guesses** — inspect logs, measurements, code, wiring, and configuration first.
+- **Systematic troubleshooting** — use `Define → Collect Evidence → Isolate → Verify → Prevent`.
+- **Baseline discipline** — preserve known-good software versions and test configurations until a new baseline is explicitly approved.
+- **Practical engineering** — prefer measurable checks, expected values, selection criteria, and regression verification.
+- **Bilingual communication** — support concise Thai/English technical reporting when useful.
+- **Safe public reuse** — publish methods and templates, not secrets or sensitive project data.
 
 <a id="available-skills"></a>
 
 ### Available skills
 
-| Skill | Purpose | Main contents |
-|---|---|---|
-| [`professional-project-readme`](skills/professional-project-readme/) | Creates or substantially redesigns professional repository README files in a bilingual DataPEA/ADTD-inspired format. | `SKILL.md`, Codex UI metadata, and a reusable README template |
+| Skill | Purpose |
+|---|---|
+| [`professional-project-readme`](skills/professional-project-readme/) | Create polished bilingual repository documentation. |
+| [`engineering-troubleshooting`](skills/engineering-troubleshooting/) | Systematically isolate faults across software, hardware, wiring, setup, equipment, communication, power, and environment. |
+| [`automotive-can-capl`](skills/automotive-can-capl/) | Develop and debug CAN/CANoe/CAPL/DBC workflows, including long-run timing and interface troubleshooting. |
+| [`electrical-power-lab`](skills/electrical-power-lab/) | Analyze 3-phase lab power, regenerative equipment, protection coordination, neutral/harmonic issues, and energy use. |
+| [`esp32-data-logger-control`](skills/esp32-data-logger-control/) | Build robust ESP32 web loggers/controllers with serial equipment links, SD logging, profiles, and multi-node designs. |
+| [`raspberry-pi-linux-troubleshooting`](skills/raspberry-pi-linux-troubleshooting/) | Troubleshoot Raspberry Pi/Linux networking, VNC, Wayland/X11, autologin, headless sessions, and remote access. |
+| [`equipment-driver-integration`](skills/equipment-driver-integration/) | Build reusable equipment drivers around SCPI, GPIB, RS232, Modbus, CAN, command parsing, and state handling. |
+| [`test-data-plotting-performance`](skills/test-data-plotting-performance/) | Design responsive long-run plotting tools with dual axes, decimation, fading, reports, and bounded memory. |
+| [`software-release-maintenance`](skills/software-release-maintenance/) | Inspect repositories, fix code, regression-test, update docs/version history, package releases, and preserve baselines. |
+| [`technical-reporting-presentation`](skills/technical-reporting-presentation/) | Turn engineering work into concise impact-focused slides, reports, lessons learned, and team-development material. |
+| [`home-assistant-truenas-iot`](skills/home-assistant-truenas-iot/) | Plan and troubleshoot Home Assistant OS on TrueNAS VM environments and integrate mixed IoT ecosystems step by step. |
+| [`technical-comparison-selection`](skills/technical-comparison-selection/) | Compare engineering components or technologies using measurable criteria, constraints, compatibility, and practical recommendations. |
+| [`engineering-translation-writing`](skills/engineering-translation-writing/) | Translate and polish Thai/English engineering communication without losing technical meaning. |
+| [`windows-automation-scripting`](skills/windows-automation-scripting/) | Create small Windows/Python/batch utilities for file processing, scheduled backup, persistent consoles, and repeatable automation. |
 
-### How Codex skills work
+### Skill activation model
 
-A skill is a directory containing a required `SKILL.md` file and optional resources such as templates, references, scripts, or UI metadata. Codex can activate a skill explicitly from a prompt or implicitly when a request matches the skill description.
+Each skill has a required `SKILL.md` and an `agents/openai.yaml` metadata file. Skills can be invoked explicitly, for example:
 
-See the [official OpenAI guide to building skills](https://developers.openai.com/codex/skills/) for the current specification and supported locations.
+```text
+$engineering-troubleshooting Help isolate this intermittent test failure.
+```
+
+or selected automatically when the request clearly matches the skill description.
 
 <a id="installation"></a>
 
 ### Installation
 
-#### Option 1 — Ask Codex to install it
-
-Invoke `$skill-installer` and ask it to install `professional-project-readme` from this repository:
+#### Install one skill with Codex
 
 ```text
-$skill-installer Install professional-project-readme from https://github.com/TOPTUBBY/ChatGPT-CodexSkills/tree/main/skills/professional-project-readme
+$skill-installer Install engineering-troubleshooting from https://github.com/TOPTUBBY/ChatGPT-CodexSkills/tree/main/skills/engineering-troubleshooting
 ```
 
-#### Option 2 — Install manually on Windows
+Replace the final folder name with any skill from the table above.
+
+#### Install all skills manually on Windows
 
 ```powershell
 git clone https://github.com/TOPTUBBY/ChatGPT-CodexSkills.git
 New-Item -ItemType Directory -Force "$HOME\.agents\skills" | Out-Null
-Copy-Item -Recurse -Force ".\ChatGPT-CodexSkills\skills\professional-project-readme" "$HOME\.agents\skills\"
+Copy-Item -Recurse -Force ".\ChatGPT-CodexSkills\skills\*" "$HOME\.agents\skills\"
 ```
 
-#### Option 3 — Install manually on macOS or Linux
+#### Install all skills manually on macOS/Linux
 
 ```bash
 git clone https://github.com/TOPTUBBY/ChatGPT-CodexSkills.git
 mkdir -p "$HOME/.agents/skills"
-cp -R "ChatGPT-CodexSkills/skills/professional-project-readme" "$HOME/.agents/skills/"
+cp -R ChatGPT-CodexSkills/skills/* "$HOME/.agents/skills/"
 ```
-
-Codex detects skill changes automatically. Restart Codex if the newly installed skill does not appear.
-
-### Usage
-
-Explicitly invoke the skill in Codex:
-
-```text
-$professional-project-readme Create a professional bilingual README for this repository.
-```
-
-You can also make a normal README request. Codex may select the skill automatically when the request matches its description.
 
 ### Repository structure
 
@@ -96,26 +102,25 @@ ChatGPT-CodexSkills/
 ├── LICENSE
 ├── README.md
 └── skills/
-    └── professional-project-readme/
-        ├── SKILL.md
-        ├── agents/
-        │   └── openai.yaml
-        └── assets/
-            └── README.template.md
+    ├── automotive-can-capl/
+    ├── electrical-power-lab/
+    ├── engineering-translation-writing/
+    ├── engineering-troubleshooting/
+    ├── equipment-driver-integration/
+    ├── esp32-data-logger-control/
+    ├── home-assistant-truenas-iot/
+    ├── professional-project-readme/
+    ├── raspberry-pi-linux-troubleshooting/
+    ├── software-release-maintenance/
+    ├── technical-comparison-selection/
+    ├── technical-reporting-presentation/
+    ├── test-data-plotting-performance/
+    └── windows-automation-scripting/
 ```
 
-### Updating an installed skill
+### Public-safety boundary
 
-Pull the latest repository changes, then copy the skill directory to your personal skills directory again. Review changes before updating workflows used in important repositories.
-
-### Troubleshooting
-
-| Problem | Suggested action |
-|---|---|
-| Skill does not appear | Confirm that `SKILL.md` is directly inside the skill folder, then restart Codex. |
-| Skill is not selected automatically | Invoke it explicitly with `$professional-project-readme`. |
-| An older version is still used | Replace the installed folder with the latest repository copy and restart Codex. |
-| README output contains assumptions | Provide the repository files or facts needed by the skill; it is designed not to invent unverified details. |
+This repository is intended for reusable methods. Before publishing updates, remove or generalize credentials, internal URLs, private infrastructure, customer/sample identifiers, serial numbers, personal financial information, and proprietary project data unless publication is explicitly authorized.
 
 ---
 
@@ -125,52 +130,22 @@ Pull the latest repository changes, then copy the skill directory to your person
 
 ### ภาพรวม
 
-ChatGPT-CodexSkills คือคลังสาธารณะสำหรับเก็บทักษะที่นำกลับมาใช้ซ้ำได้ใน ChatGPT และ Codex แต่ละทักษะประกอบด้วยคำสั่งเฉพาะทางและทรัพยากรสนับสนุน เพื่อให้งานที่ทำซ้ำในหลายโปรเจกต์มีคุณภาพและรูปแบบสม่ำเสมอ
+Repository นี้รวบรวม Skill ที่สกัดจากวิธีทำงานจริงและนำกลับมาใช้ซ้ำได้ ครอบคลุมงานวิศวกรรมไฟฟ้า/ยานยนต์, CAN/CAPL, ESP32, Linux/Raspberry Pi, Equipment Interface, Data Plotting, Software Release, Technical Report/Presentation, Home Assistant และงาน Automation บน Windows
 
-ปัจจุบัน repository นี้มีทักษะสำหรับจัดทำ README แบบมืออาชีพ โดยประยุกต์รูปแบบเอกสารจากโปรเจกต์ DataPEA และ ADTD
+แนวทางหลักคือ **ไม่เก็บข้อมูลโปรเจกต์แบบ dump ลง public repository** แต่เปลี่ยนประสบการณ์และความรู้ให้เป็นขั้นตอนแก้ปัญหา วิธีตรวจสอบ และเกณฑ์ตัดสินใจที่ใช้กับโปรเจกต์อื่นได้
 
-### จุดประสงค์
+### หลักการใช้งาน
 
-- 📚 รวมขั้นตอนการทำงานที่ใช้ซ้ำไว้ในระบบควบคุมเวอร์ชัน
-- 🔁 ใช้มาตรฐานงานเดียวกันกับโปรเจกต์ในอนาคต
-- 💻 ติดตั้ง personal skill บนคอมพิวเตอร์เครื่องอื่นได้ง่าย
-- 🤝 เปิดให้พัฒนาและตรวจสอบการเปลี่ยนแปลงผ่าน Git
-- 🔒 เผยแพร่เฉพาะคำสั่งและแม่แบบ โดยไม่รวมข้อมูลลับหรือข้อมูลภายในของโปรเจกต์
+- เริ่มจากหลักฐานและค่าที่วัดได้ ไม่เดาสุ่ม
+- ใช้ Framework `Define → Collect Evidence → Isolate → Verify → Prevent`
+- รักษา baseline/version ที่ใช้งานได้จริงจนกว่าจะอนุมัติ baseline ใหม่
+- งานแก้ปัญหาให้เริ่มจาก check ที่เร็วและเสี่ยงต่ำก่อน แล้วค่อยลงลึก
+- งานเอกสารให้สั้น ชัด มี Impact และรักษาความหมายทางเทคนิค
+- ก่อน push ข้อมูลลง public repo ให้ตัดข้อมูลส่วนตัว ข้อมูลลูกค้า secret และข้อมูลภายในที่ไม่จำเป็นออก
 
-### ทักษะที่มีในปัจจุบัน
+### การติดตั้ง
 
-| ทักษะ | ใช้สำหรับ | ไฟล์สำคัญ |
-|---|---|---|
-| [`professional-project-readme`](skills/professional-project-readme/) | สร้างหรือปรับโครงสร้าง README ของ repository ให้ดูเป็นมืออาชีพ มีภาษาอังกฤษและภาษาไทย และใช้แนวทางแบบ DataPEA/ADTD | `SKILL.md`, ข้อมูลสำหรับหน้า Codex และแม่แบบ README |
-
-### วิธีติดตั้ง
-
-วิธีที่ง่ายที่สุดคือเรียก `$skill-installer` ใน Codex แล้วสั่งให้ติดตั้ง `professional-project-readme` จาก repository นี้ ตามตัวอย่างในหัวข้อ [Installation](#installation)
-
-Codex จะตรวจพบทักษะใหม่โดยอัตโนมัติ หากยังไม่แสดงในรายการ ให้ปิดและเปิด Codex ใหม่อีกครั้ง
-
-### วิธีใช้งาน
-
-เรียกทักษะโดยตรงในข้อความที่ส่งให้ Codex:
-
-```text
-$professional-project-readme ช่วยสร้าง README ภาษาไทยและภาษาอังกฤษแบบมืออาชีพสำหรับโปรเจกต์นี้
-```
-
-นอกจากนี้ยังสามารถขอให้ Codex สร้างหรือปรับปรุง README ตามปกติได้ หากรายละเอียดงานตรงกับคำอธิบายของทักษะ Codex อาจเลือกใช้ทักษะนี้ให้อัตโนมัติ
-
-### การอัปเดต
-
-ดาวน์โหลดการเปลี่ยนแปลงล่าสุดจาก repository แล้วคัดลอกโฟลเดอร์ทักษะไปยัง personal skills directory อีกครั้ง ควรตรวจสอบการเปลี่ยนแปลงก่อนนำเวอร์ชันใหม่ไปใช้กับ repository สำคัญ
-
-### การแก้ปัญหาเบื้องต้น
-
-| ปัญหา | วิธีตรวจสอบ |
-|---|---|
-| ไม่พบทักษะใน Codex | ตรวจสอบว่า `SKILL.md` อยู่ภายในโฟลเดอร์ทักษะโดยตรง แล้วเปิด Codex ใหม่ |
-| Codex ไม่เลือกทักษะให้อัตโนมัติ | เรียกใช้โดยตรงด้วย `$professional-project-readme` |
-| Codex ยังใช้ทักษะเวอร์ชันเดิม | คัดลอกโฟลเดอร์เวอร์ชันล่าสุดทับของเดิม แล้วเปิด Codex ใหม่ |
-| README มีข้อมูลที่ยังไม่ยืนยัน | ส่งไฟล์หรือข้อมูลจริงของ repository ให้ครบ เนื่องจากทักษะนี้ถูกออกแบบไม่ให้สร้างข้อเท็จจริงขึ้นเอง |
+สามารถติดตั้งเฉพาะ Skill ผ่าน `$skill-installer` หรือ clone repository แล้วคัดลอกทุกโฟลเดอร์ใต้ `skills/` ไปที่ personal skills directory ของ Codex ตามตัวอย่างในหัวข้อ [Installation](#installation)
 
 ---
 
@@ -181,6 +156,7 @@ $professional-project-readme ช่วยสร้าง README ภาษาไ�
 - **Visibility:** Public
 - **License:** [MIT](LICENSE)
 - **Maintainer:** [TOPTUBBY](https://github.com/TOPTUBBY)
-- **Current skill count:** 1
+- **Current skill count:** 14
+- **Knowledge snapshot:** 2026-09-21
 
-Contributions, issue reports, and improvements are welcome through GitHub Issues and pull requests.
+Contributions and improvements are welcome through GitHub Issues and pull requests.
