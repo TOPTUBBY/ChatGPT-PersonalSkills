@@ -1,13 +1,33 @@
 ---
 name: automotive-can-capl
-description: Develop, debug, and review automotive CAN/CANoe/CAPL/DBC workflows, including Classical CAN setup, signal/database validation, timing, long-duration measurements, Vector interface troubleshooting, logging, and equipment control through CANoe. Use for CAN communication, CAPL test sequences, DBC integration, and Vector hardware issues.
+description: Develop, teach, debug, and review automotive CAN/CANoe/CAPL/DBC/vTESTstudio workflows, including Classical CAN setup, signal/database validation, timing, long-duration measurements, Vector interface troubleshooting, logging, simulation, test automation, and equipment control through CANoe. Use for CAN communication, beginner CANoe training, CAPL test sequences, vTESTstudio tests, DBC integration, and Vector hardware issues.
 ---
 
-# Automotive CAN / CANoe / CAPL
+# Automotive CAN / CANoe / CAPL / vTESTstudio
 
-Build and troubleshoot CAN-based test systems with a strong separation between network, database, sequence, hardware interface, and equipment layers.
+Build, explain, and troubleshoot CAN-based test systems with a strong separation between network, database, mapping, simulation, sequence, hardware interface, logging, and test layers.
 
-## Workflow
+## Beginner mental model
+
+Teach the tool chain as a signal path rather than as isolated windows:
+
+```text
+Database / DBC
+      ↓
+CAN channel + mapping
+      ↓
+Simulation / node logic / CAPL
+      ↓
+System Variables + Panels
+      ↓
+Measurement + Logging
+      ↓
+vTESTstudio / automated test + evidence
+```
+
+For newcomers, expand abbreviations on first use and explain what each layer is for before showing menu operations. Connect every concept to a real use case: observe a signal, stimulate a node, control equipment, reproduce a fault, automate a manual check, or collect evidence.
+
+## Core workflow
 
 1. Confirm network fundamentals:
    - CAN type and bitrate
@@ -24,14 +44,24 @@ Build and troubleshoot CAN-based test systems with a strong separation between n
    - units
    - cycle time
    - multiplexing
-3. In CANoe, separate:
-   - network configuration
-   - CAPL logic
-   - test sequence
-   - logging
-   - equipment interface
+3. Verify the CANoe signal path in order:
+   - database
+   - channel/mapping
+   - simulation/node logic
+   - System Variables / panel
+   - measurement/logging/test
 4. Reproduce failures with the smallest configuration possible.
 5. Compare against a known-good channel/interface when hardware is suspect.
+
+## Troubleshooting signal flow
+
+Use this sequence instead of random edits:
+
+```text
+Symptom → Source → Mapping → Logic → Output → Evidence
+```
+
+At each stage, prove whether the expected value/event exists before moving downstream. Change one variable at a time and retain evidence from the failing and corrected cases.
 
 ## CAPL timing
 
@@ -61,6 +91,43 @@ Recommended controls:
 - suspend or serialize polling around critical writes
 - log command timestamp, response timestamp, and origin task
 
+## Logging practice
+
+Before logging:
+1. Define the target signals/messages and the trigger or measurement window.
+2. Verify the values live in CANoe first.
+3. Record enough context to reproduce the run.
+
+For root-cause work, retain raw bus evidence such as BLF/ASC when appropriate. Store the project/database version with the evidence so the log can be decoded later. Avoid committing huge raw logs to normal source control unless the repository is intentionally designed for test data.
+
+## vTESTstudio test design
+
+Convert manual procedures into small deterministic tests:
+
+```text
+Precondition → Stimulus → Expected Result → Evidence
+```
+
+Guidelines:
+- keep one clear purpose per test case
+- state preconditions explicitly
+- separate stimulus from verdict logic
+- use measurable expected results
+- capture evidence useful for failure analysis
+- avoid timing sleeps when an observable state/event can be awaited instead
+- keep reusable setup/cleanup logic centralized
+
+## Project/version hygiene
+
+Prefer relative paths so projects remain portable across PCs. Keep database and project configuration together when practical. Source-control the configuration, database, panel resources, CAPL/source, and automated tests; exclude transient build/runtime files and oversized logs.
+
+For reproducibility, record relevant versions such as:
+- project/configuration
+- ECU or target software when applicable
+- database/DBC
+- CANoe/vTESTstudio
+- author/date or change reference
+
 ## Vector hardware troubleshooting
 
 If one Vector interface or group of channels fails while another works:
@@ -77,6 +144,8 @@ If the fault follows the interface rather than the piggy/channel/setup, prioriti
 
 - CAN frames are electrically valid and error counters stable.
 - DBC interpretation matches raw bytes.
+- The complete signal path is verified from source through output.
 - CAPL timing remains correct for the intended run duration.
-- Logging contains enough timestamps to explain sequence behavior.
+- Logging contains enough timestamps/context to explain sequence behavior.
+- Automated tests have explicit preconditions, stimulus, expected result, and evidence.
 - A fix is regression-tested on relevant channels and operating modes.
