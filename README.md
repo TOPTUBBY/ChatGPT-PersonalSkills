@@ -7,7 +7,7 @@
 **ชุดทักษะ Codex ที่นำกลับมาใช้ซ้ำได้ สำหรับงานวิศวกรรม ซอฟต์แวร์ เอกสาร และการแก้ปัญหาเชิงเทคนิค**
 
 [![Codex](https://img.shields.io/badge/Codex-Compatible-111827?style=for-the-badge)](https://developers.openai.com/codex/skills/)
-[![Skills](https://img.shields.io/badge/Skills-14-2563EB?style=for-the-badge)](#available-skills)
+[![Skills](https://img.shields.io/badge/Skills-15-2563EB?style=for-the-badge)](#available-skills)
 [![License](https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Active-0EA5E9?style=for-the-badge)](#repository-status)
 
@@ -46,6 +46,7 @@ The skills are intentionally written as reusable operating procedures rather tha
 | [`engineering-troubleshooting`](skills/engineering-troubleshooting/) | Systematically isolate faults across software, hardware, wiring, setup, equipment, communication, power, and environment. |
 | [`automotive-can-capl`](skills/automotive-can-capl/) | Develop and debug CAN/CANoe/CAPL/DBC workflows, including long-run timing and interface troubleshooting. |
 | [`electrical-power-lab`](skills/electrical-power-lab/) | Analyze 3-phase lab power, regenerative equipment, protection coordination, neutral/harmonic issues, and energy use. |
+| [`switching-power-supply-pcb`](skills/switching-power-supply-pcb/) | Design/review buck regulators, feedback/current limiting, two-layer PCB layout, and ripple/load testing. |
 | [`esp32-data-logger-control`](skills/esp32-data-logger-control/) | Build robust ESP32 web loggers/controllers with serial equipment links, SD logging, profiles, and multi-node designs. |
 | [`raspberry-pi-linux-troubleshooting`](skills/raspberry-pi-linux-troubleshooting/) | Troubleshoot Raspberry Pi/Linux networking, VNC, Wayland/X11, autologin, headless sessions, and remote access. |
 | [`equipment-driver-integration`](skills/equipment-driver-integration/) | Build reusable equipment drivers around SCPI, GPIB, RS232, Modbus, CAN, command parsing, and state handling. |
@@ -112,11 +113,19 @@ ChatGPT-CodexSkills/
     ├── professional-project-readme/
     ├── raspberry-pi-linux-troubleshooting/
     ├── software-release-maintenance/
+    ├── switching-power-supply-pcb/
     ├── technical-comparison-selection/
     ├── technical-reporting-presentation/
     ├── test-data-plotting-performance/
     └── windows-automation-scripting/
 ```
+
+### Latest skill update — 2026-10-15
+
+- Added `switching-power-supply-pcb`: regulator/BOM verification, LM2596 adjustable feedback, shunt drop, EMI-aware layout, oscilloscope ripple technique, and safe bring-up.
+- Improved `automotive-can-capl`: SysVar versus Signal, DBC/A2L/ARXML/CDD/XCP, and deterministic multi-case test cleanup.
+- Improved `esp32-data-logger-control`, `software-release-maintenance`, and `test-data-plotting-performance` with relay protocol checks, self-hosted Git workflows, and smooth graph scrolling.
+- Public reusable procedures only; no private project logs, customer/sample data, serial numbers, credentials, or personal financial information.
 
 ### Public-safety boundary
 
@@ -156,7 +165,7 @@ Repository นี้รวบรวม Skill ที่สกัดจากว�
 - **Visibility:** Public
 - **License:** [MIT](LICENSE)
 - **Maintainer:** [TOPTUBBY](https://github.com/TOPTUBBY)
-- **Current skill count:** 14
-- **Knowledge snapshot:** 2026-09-21
+- **Current skill count:** 15
+- **Knowledge snapshot:** 2026-10-15
 
 Contributions and improvements are welcome through GitHub Issues and pull requests.

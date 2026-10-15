@@ -77,6 +77,18 @@ If a graph vanishes after hours:
 - inspect integer/time range assumptions
 - reproduce with accelerated synthetic data
 
+## Smooth scrolling and layout stability
+
+For live plots with pan/zoom and Time/Div:
+- Maintain one authoritative visible X-axis range and apply viewport changes atomically.
+- Avoid toggling scrollbar visibility or reconstructing its bounds on every incoming sample; this can cause flicker/jumps.
+- Pause auto-follow while the user pans, then resume only on explicit action.
+- Clamp the viewport when old points are evicted without silently resetting the chosen Time/Div.
+- Throttle redraws independently of raw acquisition; do not discard logged samples.
+- Test scrolling during live updates, resizing, tab switching, and long-run buffer rotation.
+
+For split-panel sizing bugs, inspect runtime assignments, resize handlers, persisted preferences, and Designer defaults; a changed initial SplitterDistance may be overwritten later.
+
 ## Regression checks
 
 Test:

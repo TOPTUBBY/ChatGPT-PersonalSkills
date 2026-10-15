@@ -140,6 +140,37 @@ If one Vector interface or group of channels fails while another works:
 
 If the fault follows the interface rather than the piggy/channel/setup, prioritize interface/firmware/driver compatibility over project logic.
 
+## CANoe training: SysVar, Signal, and description files
+
+Teach these as different layers, not interchangeable variables:
+- **System Variable (SysVar):** internal CANoe configuration state used by panels, CAPL, or test logic. Changing a SysVar alone does not transmit a CAN message.
+- **CAN Signal:** data field in a network message, encoded using the network database and transmitted by an active node.
+- **Mapping:** CAPL/simulation logic may map a SysVar to a message signal; verify both the value change and outgoing CAN frame.
+
+Recommended beginner progression: interface/license → SysVar and Signal → description files → simulation/test nodes → Panel → Trace/Graphics → Logging → automated tests.
+
+| Item | Main role |
+|---|---|
+| DBC | CAN message/signal database |
+| ARXML | AUTOSAR system/communication description (scope varies) |
+| A2L | ECU measurement/calibration object description |
+| XCP | Measurement/calibration communication protocol, not a file format |
+| CDD | ECU diagnostic description |
+
+Check actual file content and configured tool support before claiming compatibility.
+
+## Safe lifecycle across multiple test cases
+
+A test case must not reset voltage/current or simulator state while the prior case still has stored energy. Use an explicit lifecycle:
+
+```text
+Initialize → Preconditions → Stimulus → Verdict/Evidence
+→ Controlled ramp-down → Verify discharge/safe state
+→ Reset/prepare → Next test case
+```
+
+Keep Panel, SysVar, simulation node, and CAPL/vTESTstudio test module on compatible versions. Use measured thresholds and acknowledgments rather than fixed sleeps; define timeout/abort cleanup. Validate the entire multi-case sequence, not just one isolated test.
+
 ## Completion checks
 
 - CAN frames are electrically valid and error counters stable.

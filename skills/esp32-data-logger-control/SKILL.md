@@ -90,6 +90,18 @@ For large labs, evaluate:
 
 Prioritize graceful node disappearance. One node going offline should not make unrelated nodes uncontrollable. Track node heartbeat, last-seen time, and capability metadata.
 
+## Serial relay-controller extension
+
+For ESP32/ESP8266 relay control through a PC GUI, distinguish **command sent**, **device acknowledged**, and **physical output verified**. A COM port opening successfully does not prove a relay switched.
+
+- Define framing and validation, e.g. `STX | CMD | DATA | CHECKSUM | ETX`; document exact bytes, length, checksum, and response behavior.
+- Reject malformed frames, unsupported commands, and invalid channel numbers before touching GPIO.
+- Default to a safe startup output state (usually all OFF), taking active-low relay boards into account.
+- Verify GPIO boot/strapping constraints, 3.3 V logic compatibility, relay power supply, contact ratings, and isolation. ESP32-C3 and ESP8266 GPIO maps are not interchangeable.
+- Support ALL OFF and individual channel control; resynchronize GUI after reset, disconnect, and reconnect.
+- When testing virtual COM/RFC2217 bridges, verify supported timeout and serial options rather than assuming physical COM behavior.
+- Never treat an MCU relay as the sole safety interlock for hazardous power.
+
 ## Completion checks
 
 - UI remains responsive with equipment disconnected.

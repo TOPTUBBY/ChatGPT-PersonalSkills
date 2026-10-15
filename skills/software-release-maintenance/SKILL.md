@@ -58,6 +58,16 @@ A lightweight launcher/updater should:
 - preserve user configuration where required
 - support rollback or at least leave recoverable previous files
 
+## Git hosting and self-hosted Gitea
+
+- Distinguish Git (version-control client/protocol) from GitHub, GitLab, and Gitea (repository hosting and collaboration).
+- Confirm host reachability, repository permissions, remote URL, and authentication method before pushing.
+- Prefer a local Git client for multi-file changes and meaningful history. If Git is unavailable, evaluate permitted portable Git/GUI clients or host web/API upload, explaining the limitations of each.
+- Do not embed access tokens, passwords, or private server addresses in documentation or commits.
+- Before promoting a development branch to main, compare history/diffs and prefer an intentional merge or fast-forward. Avoid force pushes without explicit approval and recovery plan.
+- For self-hosted installs, verify the actual running web endpoint and logs independently from the installer UI.
+- Preserve Designer-generated form code, control names, event wiring, and target .NET framework during UI changes; validate in the intended IDE and at runtime.
+
 ## Completion report
 
 Summarize:
