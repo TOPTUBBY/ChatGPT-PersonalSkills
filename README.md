@@ -120,7 +120,14 @@ ChatGPT-CodexSkills/
     └── windows-automation-scripting/
 ```
 
-### Latest skill update — 2026-10-15
+### Latest skill update — 2026-11-01
+
+- Expanded existing skills with reusable diagnostics for CANoe COM attachment/reconnection and managed-Windows standalone packaging.
+- Added BLE RGB indicator integration checks covering GATT discovery, brightness edge cases, status priority, and non-blocking desktop control.
+- Added panel-meter wiring and grounded metal-enclosure verification, including low-side shunt pitfalls and inductor thermal testing.
+- No new skill folder: references live alongside the existing relevant skills. No device identifiers, private infrastructure, credentials, or customer data included.
+
+### Previous skill update — 2026-10-15
 
 - Added `switching-power-supply-pcb`: regulator/BOM verification, LM2596 adjustable feedback, shunt drop, EMI-aware layout, oscilloscope ripple technique, and safe bring-up.
 - Improved `automotive-can-capl`: SysVar versus Signal, DBC/A2L/ARXML/CDD/XCP, and deterministic multi-case test cleanup.
@@ -166,6 +173,6 @@ Repository นี้รวบรวม Skill ที่สกัดจากว�
 - **License:** [MIT](LICENSE)
 - **Maintainer:** [TOPTUBBY](https://github.com/TOPTUBBY)
 - **Current skill count:** 15
-- **Knowledge snapshot:** 2026-10-15
+- **Knowledge snapshot:** 2026-11-01
 
 Contributions and improvements are welcome through GitHub Issues and pull requests.
