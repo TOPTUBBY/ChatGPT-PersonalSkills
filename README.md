@@ -169,10 +169,17 @@ Repository นี้รวบรวม Skill ที่สกัดจากว�
 
 ## 📌 Repository status
 
-- **Visibility:** Public
+- **Visibility:** Private
 - **License:** [MIT](LICENSE)
 - **Maintainer:** [TOPTUBBY](https://github.com/TOPTUBBY)
 - **Current skill count:** 15
 - **Knowledge snapshot:** 2026-11-01
 
-Contributions and improvements are welcome through GitHub Issues and pull requests.
+Private repository maintained for personal reusable workflows.
+
+
+---
+
+## 🔒 Private plugin bundles
+
+A private plugin marketplace and category bundles are available on branch `feature/private-skill-plugins`. See `PLUGIN_BUNDLES.md` on that branch for installation and update instructions.

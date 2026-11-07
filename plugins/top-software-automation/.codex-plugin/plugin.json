@@ -1,0 +1,9 @@
+{
+  "name": "top-software-automation",
+  "version": "1.0.0",
+  "description": "Software maintenance, Windows automation, and responsive test-data plotting workflows for engineering tools and desktop utilities.",
+  "author": {
+    "name": "TOPTUBBY"
+  },
+  "skills": "./skills/"
+}

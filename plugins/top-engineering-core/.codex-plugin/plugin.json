@@ -1,0 +1,9 @@
+{
+  "name": "top-engineering-core",
+  "version": "1.0.0",
+  "description": "Engineering analysis and troubleshooting workflows for automotive CAN/CAPL, lab power, equipment integration, PCB power supplies, and technical selection.",
+  "author": {
+    "name": "TOPTUBBY"
+  },
+  "skills": "./skills/"
+}

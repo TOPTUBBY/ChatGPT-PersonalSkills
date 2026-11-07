@@ -1,0 +1,5 @@
+interface:
+  display_name: "Windows Automation Scripting"
+  short_description: "Build practical CSV, backup, and file automation scripts"
+  brand_color: "#0078D4"
+  default_prompt: "Use $windows-automation-scripting to build or debug this Windows automation task."

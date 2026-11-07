@@ -1,0 +1,5 @@
+interface:
+  display_name: "ESP32 Logger & Control"
+  short_description: "Build robust ESP32 serial loggers, controllers, and web UIs"
+  brand_color: "#059669"
+  default_prompt: "Use $esp32-data-logger-control to design or debug this ESP32 equipment logger/controller."

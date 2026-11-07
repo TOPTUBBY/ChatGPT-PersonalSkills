@@ -1,0 +1,5 @@
+interface:
+  display_name: "Equipment Driver Integration"
+  short_description: "Build reusable SCPI, serial, GPIB, and Modbus drivers"
+  brand_color: "#7C3AED"
+  default_prompt: "Use $equipment-driver-integration to design or review this automated test-equipment driver."

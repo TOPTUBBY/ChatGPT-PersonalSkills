@@ -1,0 +1,18 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "top-technical-communication",
+  "version": "1.0.0",
+  "description": "Technical writing, Thai-English engineering communication, presentations, reports, and professional project README workflows.",
+  "author": {
+    "name": "TOPTUBBY",
+    "url": "https://github.com/TOPTUBBY"
+  },
+  "repository": "https://github.com/TOPTUBBY/ChatGPT-CodexSkills",
+  "keywords": [
+    "private-skills",
+    "engineering",
+    "codex",
+    "chatgpt",
+    "top-technical-communication"
+  ]
+}

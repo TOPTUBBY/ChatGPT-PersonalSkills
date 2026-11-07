@@ -1,0 +1,83 @@
+{
+  "name": "top-private-skills",
+  "interface": {
+    "displayName": "TOP Private Skills"
+  },
+  "plugins": [
+    {
+      "name": "top-engineering-core",
+      "source": {
+        "source": "local",
+        "path": "./plugins/top-engineering-core"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Engineering",
+      "interface": {
+        "displayName": "TOP Engineering Core"
+      }
+    },
+    {
+      "name": "top-embedded-iot",
+      "source": {
+        "source": "local",
+        "path": "./plugins/top-embedded-iot"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools",
+      "interface": {
+        "displayName": "TOP Embedded & IoT"
+      }
+    },
+    {
+      "name": "top-software-automation",
+      "source": {
+        "source": "local",
+        "path": "./plugins/top-software-automation"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools",
+      "interface": {
+        "displayName": "TOP Software & Automation"
+      }
+    },
+    {
+      "name": "top-technical-communication",
+      "source": {
+        "source": "local",
+        "path": "./plugins/top-technical-communication"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity",
+      "interface": {
+        "displayName": "TOP Technical Communication"
+      }
+    },
+    {
+      "name": "top-all-skills",
+      "source": {
+        "source": "local",
+        "path": "./plugins/top-all-skills"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools",
+      "interface": {
+        "displayName": "TOP All Skills"
+      }
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Automotive CAN & CAPL"
+  short_description: "Build and debug CANoe, CAPL, DBC, and Vector workflows"
+  brand_color: "#2563EB"
+  default_prompt: "Use $automotive-can-capl to inspect and troubleshoot this CAN/CANoe/CAPL workflow."

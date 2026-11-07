@@ -1,0 +1,5 @@
+interface:
+  display_name: "Professional Project README"
+  short_description: "Create polished bilingual repository documentation"
+  brand_color: "#008BD2"
+  default_prompt: "Use $professional-project-readme to create or update this project's README.md in my preferred bilingual professional format."

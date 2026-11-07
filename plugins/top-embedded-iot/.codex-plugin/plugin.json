@@ -1,0 +1,9 @@
+{
+  "name": "top-embedded-iot",
+  "version": "1.0.0",
+  "description": "Embedded and IoT workflows for ESP32 logging/control, Raspberry Pi/Linux troubleshooting, and Home Assistant/TrueNAS integrations.",
+  "author": {
+    "name": "TOPTUBBY"
+  },
+  "skills": "./skills/"
+}

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Home Assistant TrueNAS IoT"
+  short_description: "Deploy and troubleshoot Home Assistant OS on TrueNAS"
+  brand_color: "#41BDF5"
+  default_prompt: "Use $home-assistant-truenas-iot and guide me through this Home Assistant/TrueNAS task step by step."
