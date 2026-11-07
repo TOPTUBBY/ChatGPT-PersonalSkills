@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "top-productivity-projects",
+  "version": "1.0.0",
+  "description": "Official OpenAI curated skills: TOP Productivity & Projects (6 skills).",
+  "author": {
+    "name": "OpenAI (skills authors); TOPTUBBY (private packaging)"
+  },
+  "repository": "https://github.com/openai/skills",
+  "keywords": [
+    "openai",
+    "skills",
+    "private",
+    "curated"
+  ]
+}

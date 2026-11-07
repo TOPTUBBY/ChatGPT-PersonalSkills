@@ -1,0 +1,6 @@
+{
+  "name": "top-cloud-deployment",
+  "version": "1.0.0",
+  "description": "Official OpenAI curated skills: TOP Cloud & Deployment (4 skills).",
+  "skills": "./skills/"
+}

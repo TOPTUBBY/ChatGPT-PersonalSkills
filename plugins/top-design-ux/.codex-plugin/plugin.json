@@ -1,0 +1,6 @@
+{
+  "name": "top-design-ux",
+  "version": "1.0.0",
+  "description": "Official OpenAI curated skills: TOP Design & UX (8 skills).",
+  "skills": "./skills/"
+}

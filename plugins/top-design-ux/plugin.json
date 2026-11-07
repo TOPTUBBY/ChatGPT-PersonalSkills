@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "top-design-ux",
+  "version": "1.0.0",
+  "description": "Official OpenAI curated skills: TOP Design & UX (8 skills).",
+  "author": {
+    "name": "OpenAI (skills authors); TOPTUBBY (private packaging)"
+  },
+  "repository": "https://github.com/openai/skills",
+  "keywords": [
+    "openai",
+    "skills",
+    "private",
+    "curated"
+  ]
+}

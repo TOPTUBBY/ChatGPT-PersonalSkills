@@ -1,0 +1,6 @@
+{
+  "name": "top-security-quality",
+  "version": "1.0.0",
+  "description": "Official OpenAI curated skills: TOP Security & Quality (6 skills).",
+  "skills": "./skills/"
+}

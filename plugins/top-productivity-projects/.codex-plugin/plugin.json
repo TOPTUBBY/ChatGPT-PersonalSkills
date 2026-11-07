@@ -1,0 +1,6 @@
+{
+  "name": "top-productivity-projects",
+  "version": "1.0.0",
+  "description": "Official OpenAI curated skills: TOP Productivity & Projects (6 skills).",
+  "skills": "./skills/"
+}

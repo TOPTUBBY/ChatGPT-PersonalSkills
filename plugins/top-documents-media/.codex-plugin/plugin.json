@@ -1,0 +1,6 @@
+{
+  "name": "top-documents-media",
+  "version": "1.0.0",
+  "description": "Official OpenAI curated skills: TOP Documents & Media (5 skills).",
+  "skills": "./skills/"
+}
