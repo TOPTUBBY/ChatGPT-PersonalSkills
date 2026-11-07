@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "upstream": "https://github.com/openai/skills",
+  "upstream_branch": "main",
+  "upstream_base": "skills/.curated",
+  "notes": "Curated skills are copied with their upstream LICENSE.txt, scripts and references. System skills are intentionally excluded because Codex installs them itself. Run sync to materialize local plugin bundles.",
+  "categories": [
+    {
+      "name": "top-design-ux",
+      "displayName": "TOP Design & UX",
+      "skills": [
+        "figma",
+        "figma-use",
+        "figma-generate-design",
+        "figma-implement-design",
+        "figma-create-new-file",
+        "figma-generate-library",
+        "figma-create-design-system-rules",
+        "figma-code-connect-components"
+      ]
+    },
+    {
+      "name": "top-documents-media",
+      "displayName": "TOP Documents & Media",
+      "skills": [
+        "pdf",
+        "jupyter-notebook",
+        "speech",
+        "transcribe",
+        "screenshot"
+      ]
+    },
+    {
+      "name": "top-developer-tools",
+      "displayName": "TOP Developer Tools",
+      "skills": [
+        "aspnet-core",
+        "chatgpt-apps",
+        "cli-creator",
+        "migrate-to-codex",
+        "playwright",
+        "playwright-interactive",
+        "winui-app",
+        "openai-docs"
+      ]
+    },
+    {
+      "name": "top-cloud-deployment",
+      "displayName": "TOP Cloud & Deployment",
+      "skills": [
+        "cloudflare-deploy",
+        "netlify-deploy",
+        "render-deploy",
+        "vercel-deploy"
+      ]
+    },
+    {
+      "name": "top-security-quality",
+      "displayName": "TOP Security & Quality",
+      "skills": [
+        "security-best-practices",
+        "security-ownership-map",
+        "security-threat-model",
+        "sentry",
+        "gh-fix-ci",
+        "gh-address-comments"
+      ]
+    },
+    {
+      "name": "top-productivity-projects",
+      "displayName": "TOP Productivity & Projects",
+      "skills": [
+        "define-goal",
+        "linear",
+        "notion-knowledge-capture",
+        "notion-meeting-intelligence",
+        "notion-research-documentation",
+        "notion-spec-to-implementation"
+      ]
+    },
+    {
+      "name": "top-miscellaneous",
+      "displayName": "TOP Miscellaneous",
+      "skills": [
+        "hatch-pet",
+        "yeet"
+      ]
+    }
+  ]
+}
