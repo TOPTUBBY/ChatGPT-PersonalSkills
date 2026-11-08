@@ -1,0 +1,9 @@
+{
+  "name": "personal-software-and-automation",
+  "version": "2.0.0",
+  "description": "Personal Software and Automation skills bundle (3 skills), organized for Codex and ChatGPT.",
+  "author": {
+    "name": "TOPTUBBY"
+  },
+  "skills": "./skills/"
+}

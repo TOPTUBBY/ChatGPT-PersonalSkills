@@ -1,5 +1,0 @@
-interface:
-  display_name: "Raspberry Pi Linux Troubleshooting"
-  short_description: "Fix Pi networking, VNC, Wayland/X11, and headless sessions"
-  brand_color: "#A61E4D"
-  default_prompt: "Use $raspberry-pi-linux-troubleshooting and guide me from quick checks to deeper diagnostics."

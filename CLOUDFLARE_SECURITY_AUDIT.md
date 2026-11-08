@@ -8,8 +8,8 @@ Source: https://github.com/cloudflare/security-audit-skill
 - Category: TOP Security & Quality
 - Original license: MIT (retain full license with the copied skill)
 - Skill name: `security-audit`
-- Plugin: `top-security-quality` (seven skills after integration)
-- Git branch: `feature/private-skill-plugins`
+- Plugin: `personal-security-and-quality` (seven skills after integration)
+- Git branch: `main`
 
 The integration is a complete source snapshot, not an adapted summary: all skill files, JSON schema, Node validators, test fixtures and license are retained. The Cloudflare repo is an upstream dependency, not a dependency of OpenAI's curated repository.
 
@@ -19,7 +19,7 @@ The integration is a complete source snapshot, not an adapted summary: all skill
 py -3 scripts/sync-cloudflare-security-audit.py
 ```
 
-The GitHub Actions workflow also runs the Cloudflare synchronization *after* the OpenAI curated sync on each selected workflow run, preventing the Cloudflare folder from being removed when `top-security-quality` is regenerated.
+The GitHub Actions workflow also runs the Cloudflare synchronization *after* the OpenAI curated sync on each selected workflow run, preventing the Cloudflare folder from being removed when `personal-security-and-quality` is regenerated.
 
 ## Limitations
 

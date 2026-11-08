@@ -1,17 +1,17 @@
 <div align="center">
 
-# 🧩 ChatGPT-CodexSkills
+# 🧩 Personal Skills Marketplace
 
-**Reusable Codex skills for engineering, software, documentation, and technical workflows**
+**Private reusable skills for ChatGPT and Codex**
 
-**ชุดทักษะ Codex ที่นำกลับมาใช้ซ้ำได้ สำหรับงานวิศวกรรม ซอฟต์แวร์ เอกสาร และการแก้ปัญหาเชิงเทคนิค**
+**55 unique skills · 11 category plugins · zero duplicate skill sources**
 
-[![Codex](https://img.shields.io/badge/Codex-Compatible-111827?style=for-the-badge)](https://developers.openai.com/codex/skills/)
-[![Skills](https://img.shields.io/badge/Skills-15-2563EB?style=for-the-badge)](#available-skills)
-[![License](https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Active-0EA5E9?style=for-the-badge)](#repository-status)
+[![Private](https://img.shields.io/badge/Repository-Private-111827?style=for-the-badge)](https://github.com/TOPTUBBY/ChatGPT-CodexSkills)
+[![Skills](https://img.shields.io/badge/Unique%20Skills-55-2563EB?style=for-the-badge)](#catalog)
+[![Plugins](https://img.shields.io/badge/Category%20Plugins-11-0EA5E9?style=for-the-badge)](#catalog)
+[![Codex](https://img.shields.io/badge/Codex-Skills-6B7280?style=for-the-badge)](https://developers.openai.com/codex/skills/)
 
-[English](#english) · [ภาษาไทย](#ภาษาไทย) · [Installation](#installation) · [Skills](#available-skills)
+[English](#english) · [ภาษาไทย](#ภาษาไทย) · [Install](#installation) · [Catalog](#catalog) · [Updates](#updates)
 
 </div>
 
@@ -19,167 +19,160 @@
 
 <a id="english"></a>
 
-## 🇬🇧 English
+## English
 
-### Overview
+This private repository contains **55 distinct reusable Skills** organized into **11 category Plugins**: 15 personal engineering and software skills, 39 OpenAI curated skills, and Cloudflare's complete `security-audit` skill. Each source Skill is stored **once**, at `plugins/personal-<category>/skills/<skill>/`, with its original supporting resources and licenses.
 
-ChatGPT-CodexSkills is a version-controlled collection of reusable skills distilled from recurring engineering, lab, embedded, software, Linux, automation, documentation, and troubleshooting workflows.
+The older branch `main` contained 15 standalone Skills in `skills/`. Their 35 files were compared with the category-plugin copies using Git blob hashes, and **all matched exactly**. The redundant root `skills/` directory and `top-all-skills` aggregate were retired from the current tree; Git history retains every revision. The replacement **Personal All Skills** account plugin is an optional deployment package, not a duplicate tracked source bundle.
 
-The skills are intentionally written as reusable operating procedures rather than project dumps. Public files exclude credentials, private account information, salary data, customer sample logistics, device serial numbers, and unnecessary internal project identifiers.
+<a id="catalog"></a>
 
-### Design principles
+## Catalog
 
-- **Evidence before guesses** — inspect logs, measurements, code, wiring, and configuration first.
-- **Systematic troubleshooting** — use `Define → Collect Evidence → Isolate → Verify → Prevent`.
-- **Baseline discipline** — preserve known-good software versions and test configurations until a new baseline is explicitly approved.
-- **Practical engineering** — prefer measurable checks, expected values, selection criteria, and regression verification.
-- **Bilingual communication** — support concise Thai/English technical reporting when useful.
-- **Safe public reuse** — publish methods and templates, not secrets or sensitive project data.
+| Category Plugin | Skills | Purpose |
+|---|---:|---|
+| `personal-engineering-core` | 6 | CANoe/CAPL, troubleshooting, equipment, power lab and PCB |
+| `personal-embedded-and-iot` | 3 | ESP32, Raspberry Pi, Home Assistant, TrueNAS |
+| `personal-software-and-automation` | 3 | Windows automation, plotting, software release |
+| `personal-technical-communication` | 3 | Bilingual reports, presentations, README |
+| `personal-design-and-ux` | 8 | Figma, UI, design systems |
+| `personal-documents-and-media` | 5 | PDF, notebooks, screenshots, speech |
+| `personal-developer-tools` | 8 | ASP.NET, WinUI, Playwright, CLI |
+| `personal-cloud-and-deployment` | 4 | Cloudflare, Render, Netlify, Vercel |
+| `personal-security-and-quality` | 7 | Cloudflare Security Audit, security reviews, CI and monitoring |
+| `personal-productivity-and-projects` | 6 | Notion, Linear and planning |
+| `personal-miscellaneous` | 2 | Special-purpose workflows |
+| **Total** | **55** | **11 non-overlapping category Plugins** |
 
-<a id="available-skills"></a>
-
-### Available skills
-
-| Skill | Purpose |
-|---|---|
-| [`professional-project-readme`](skills/professional-project-readme/) | Create polished bilingual repository documentation. |
-| [`engineering-troubleshooting`](skills/engineering-troubleshooting/) | Systematically isolate faults across software, hardware, wiring, setup, equipment, communication, power, and environment. |
-| [`automotive-can-capl`](skills/automotive-can-capl/) | Develop and debug CAN/CANoe/CAPL/DBC workflows, including long-run timing and interface troubleshooting. |
-| [`electrical-power-lab`](skills/electrical-power-lab/) | Analyze 3-phase lab power, regenerative equipment, protection coordination, neutral/harmonic issues, and energy use. |
-| [`switching-power-supply-pcb`](skills/switching-power-supply-pcb/) | Design/review buck regulators, feedback/current limiting, two-layer PCB layout, and ripple/load testing. |
-| [`esp32-data-logger-control`](skills/esp32-data-logger-control/) | Build robust ESP32 web loggers/controllers with serial equipment links, SD logging, profiles, and multi-node designs. |
-| [`raspberry-pi-linux-troubleshooting`](skills/raspberry-pi-linux-troubleshooting/) | Troubleshoot Raspberry Pi/Linux networking, VNC, Wayland/X11, autologin, headless sessions, and remote access. |
-| [`equipment-driver-integration`](skills/equipment-driver-integration/) | Build reusable equipment drivers around SCPI, GPIB, RS232, Modbus, CAN, command parsing, and state handling. |
-| [`test-data-plotting-performance`](skills/test-data-plotting-performance/) | Design responsive long-run plotting tools with dual axes, decimation, fading, reports, and bounded memory. |
-| [`software-release-maintenance`](skills/software-release-maintenance/) | Inspect repositories, fix code, regression-test, update docs/version history, package releases, and preserve baselines. |
-| [`technical-reporting-presentation`](skills/technical-reporting-presentation/) | Turn engineering work into concise impact-focused slides, reports, lessons learned, and team-development material. |
-| [`home-assistant-truenas-iot`](skills/home-assistant-truenas-iot/) | Plan and troubleshoot Home Assistant OS on TrueNAS VM environments and integrate mixed IoT ecosystems step by step. |
-| [`technical-comparison-selection`](skills/technical-comparison-selection/) | Compare engineering components or technologies using measurable criteria, constraints, compatibility, and practical recommendations. |
-| [`engineering-translation-writing`](skills/engineering-translation-writing/) | Translate and polish Thai/English engineering communication without losing technical meaning. |
-| [`windows-automation-scripting`](skills/windows-automation-scripting/) | Create small Windows/Python/batch utilities for file processing, scheduled backup, persistent consoles, and repeatable automation. |
-
-### Skill activation model
-
-Each skill has a required `SKILL.md` and an `agents/openai.yaml` metadata file. Skills can be invoked explicitly, for example:
-
-```text
-$engineering-troubleshooting Help isolate this intermittent test failure.
-```
-
-or selected automatically when the request clearly matches the skill description.
+Five OpenAI System Skills are intentionally **not** mirrored or overwritten.
 
 <a id="installation"></a>
 
-### Installation
+## Installation — Windows
 
-#### Install one skill with Codex
-
-```text
-$skill-installer Install engineering-troubleshooting from https://github.com/TOPTUBBY/ChatGPT-CodexSkills/tree/main/skills/engineering-troubleshooting
-```
-
-Replace the final folder name with any skill from the table above.
-
-#### Install all skills manually on Windows
+Clone the private repository (you need GitHub access):
 
 ```powershell
 git clone https://github.com/TOPTUBBY/ChatGPT-CodexSkills.git
-New-Item -ItemType Directory -Force "$HOME\.agents\skills" | Out-Null
-Copy-Item -Recurse -Force ".\ChatGPT-CodexSkills\skills\*" "$HOME\.agents\skills\"
+cd ChatGPT-CodexSkills
 ```
 
-#### Install all skills manually on macOS/Linux
+**Codex Standalone Skills (Python 3):**
 
-```bash
-git clone https://github.com/TOPTUBBY/ChatGPT-CodexSkills.git
-mkdir -p "$HOME/.agents/skills"
-cp -R ChatGPT-CodexSkills/skills/* "$HOME/.agents/skills/"
+```powershell
+# Install the original 15 custom skills from their single canonical locations
+powershell -ExecutionPolicy Bypass -File .\scripts\install-standalone-skills.ps1 -Personal
+
+# Preview all 55 skills, with no changes
+powershell -ExecutionPolicy Bypass -File .\scripts\install-standalone-skills.ps1 -All -DryRun
+
+# Install all 55 distinct skills
+powershell -ExecutionPolicy Bypass -File .\scripts\install-standalone-skills.ps1 -All
+
+# Install one
+powershell -ExecutionPolicy Bypass -File .\scripts\install-standalone-skills.ps1 -Skill automotive-can-capl
 ```
 
-### Repository structure
+The default destination is `~/.agents/skills`. Existing same-name folders at the selected
+destination are replaced (back up local edits first). Restart Codex after installation.
+macOS/Linux: `bash scripts/install-standalone-skills.sh --personal`.
+
+**Private Codex Plugin Marketplace (Codex CLI with plugin commands):**
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\register-private-marketplace.ps1
+```
+
+Choose the category plugins you need. Do not install the same Skill as a Plugin
+and a Standalone Skill in one runtime scope if you want to avoid duplicate names.
+
+**ChatGPT Web:** Personal Plugins are stored independently from GitHub. Newly created
+`personal-*` ChatGPT Plugins do **not** automatically remove old `top-*` account Plugins.
+Changes to this repo will also not automatically update existing account Plugins.
+
+<a id="updates"></a>
+
+## Updates and synchronization
+
+```powershell
+# Review upstream changes before publishing
+powershell -ExecutionPolicy Bypass -File .\scripts\sync-upstream-skills.ps1
+py -3 scripts/sync-cloudflare-security-audit.py
+git status
+git add plugins .agents/plugins/marketplace.json
+git commit -m "Sync official skills"
+git push origin main
+```
+
+The [GitHub Actions workflow](.github/workflows/sync-openai-curated-skills.yml)
+syncs curated OpenAI skills and Cloudflare Security Audit, runs Node.js validator
+tests, and checks no skill folder name appears in more than one category.
+Workflow writes to `main` only when granted the required repository permission.
+
+To update one personal skill, edit its canonical folder in `plugins/personal-<category>/skills/`.
+Do not add back root `skills/` or duplicate it into another category.
+
+### Structure
 
 ```text
 ChatGPT-CodexSkills/
-├── LICENSE
+├── .agents/plugins/marketplace.json
+├── .github/workflows/sync-openai-curated-skills.yml
+├── plugins/
+│   ├── personal-engineering-core/skills/
+│   ├── personal-embedded-and-iot/skills/
+│   ├── personal-software-and-automation/skills/
+│   ├── personal-technical-communication/skills/
+│   ├── personal-design-and-ux/skills/
+│   ├── personal-documents-and-media/skills/
+│   ├── personal-developer-tools/skills/
+│   ├── personal-cloud-and-deployment/skills/
+│   ├── personal-security-and-quality/skills/
+│   ├── personal-productivity-and-projects/skills/
+│   └── personal-miscellaneous/skills/
+├── PERSONAL_SKILLS.json
+├── UPSTREAM_SKILLS.json
+├── scripts/
 ├── README.md
-└── skills/
-    ├── automotive-can-capl/
-    ├── electrical-power-lab/
-    ├── engineering-translation-writing/
-    ├── engineering-troubleshooting/
-    ├── equipment-driver-integration/
-    ├── esp32-data-logger-control/
-    ├── home-assistant-truenas-iot/
-    ├── professional-project-readme/
-    ├── raspberry-pi-linux-troubleshooting/
-    ├── software-release-maintenance/
-    ├── switching-power-supply-pcb/
-    ├── technical-comparison-selection/
-    ├── technical-reporting-presentation/
-    ├── test-data-plotting-performance/
-    └── windows-automation-scripting/
+└── LICENSE
 ```
 
-### Latest skill update — 2026-11-01
+### Provenance and licensing
 
-- Expanded existing skills with reusable diagnostics for CANoe COM attachment/reconnection and managed-Windows standalone packaging.
-- Added BLE RGB indicator integration checks covering GATT discovery, brightness edge cases, status priority, and non-blocking desktop control.
-- Added panel-meter wiring and grounded metal-enclosure verification, including low-side shunt pitfalls and inductor thermal testing.
-- No new skill folder: references live alongside the existing relevant skills. No device identifiers, private infrastructure, credentials, or customer data included.
+This GitHub repository remains **private**. No credentials, private infrastructure,
+customer-specific records or proprietary logs belong in the reusable skills.
+Original personal skills use the root MIT license. Third-party content keeps
+its own original license and credit:
 
-### Previous skill update — 2026-10-15
+- <https://github.com/openai/skills> — curated OpenAI Skills
+- <https://github.com/cloudflare/security-audit-skill> — MIT Cloudflare Security Audit
 
-- Added `switching-power-supply-pcb`: regulator/BOM verification, LM2596 adjustable feedback, shunt drop, EMI-aware layout, oscilloscope ripple technique, and safe bring-up.
-- Improved `automotive-can-capl`: SysVar versus Signal, DBC/A2L/ARXML/CDD/XCP, and deterministic multi-case test cleanup.
-- Improved `esp32-data-logger-control`, `software-release-maintenance`, and `test-data-plotting-performance` with relay protocol checks, self-hosted Git workflows, and smooth graph scrolling.
-- Public reusable procedures only; no private project logs, customer/sample data, serial numbers, credentials, or personal financial information.
-
-### Public-safety boundary
-
-This repository is intended for reusable methods. Before publishing updates, remove or generalize credentials, internal URLs, private infrastructure, customer/sample identifiers, serial numbers, personal financial information, and proprietary project data unless publication is explicitly authorized.
-
----
+The complete Cloudflare audit requires Node.js, independent agent verification and an
+OS-enforced sandbox; the skills-only ChatGPT Web Plugin does not supply those automatically.
 
 <a id="ภาษาไทย"></a>
 
-## 🇹🇭 ภาษาไทย
+## ภาษาไทย
 
-### ภาพรวม
+Repository นี้เป็นคลังส่วนตัวรวม **55 Skills** แยกใน **11 Plugins** ตามประเภทการใช้งาน
+โดยใช้ชื่อขึ้นต้น `personal-` ทุก Plugin และเก็บ Skill ต้นฉบับเพียงชุดเดียวต่อหมวด
+ชื่อ Skills รายตัว เช่น `automotive-can-capl` หรือ `security-audit` ไม่เปลี่ยน
+เพื่อรักษาความเข้ากันได้กับโปรเจกต์เดิม
 
-Repository นี้รวบรวม Skill ที่สกัดจากวิธีทำงานจริงและนำกลับมาใช้ซ้ำได้ ครอบคลุมงานวิศวกรรมไฟฟ้า/ยานยนต์, CAN/CAPL, ESP32, Linux/Raspberry Pi, Equipment Interface, Data Plotting, Software Release, Technical Report/Presentation, Home Assistant และงาน Automation บน Windows
+สำหรับ Windows สามารถ Clone Repository แล้วใช้สคริปต์ติดตั้ง Skills แบบรายตัว,
+เฉพาะ 15 ตัวส่วนตัว หรือทั้งหมด 55 ตัวได้ ส่วน ChatGPT Web Personal Plugins
+ต้องอัปเดตและจัดการแยกต่างหากจาก GitHub
 
-แนวทางหลักคือ **ไม่เก็บข้อมูลโปรเจกต์แบบ dump ลง public repository** แต่เปลี่ยนประสบการณ์และความรู้ให้เป็นขั้นตอนแก้ปัญหา วิธีตรวจสอบ และเกณฑ์ตัดสินใจที่ใช้กับโปรเจกต์อื่นได้
-
-### หลักการใช้งาน
-
-- เริ่มจากหลักฐานและค่าที่วัดได้ ไม่เดาสุ่ม
-- ใช้ Framework `Define → Collect Evidence → Isolate → Verify → Prevent`
-- รักษา baseline/version ที่ใช้งานได้จริงจนกว่าจะอนุมัติ baseline ใหม่
-- งานแก้ปัญหาให้เริ่มจาก check ที่เร็วและเสี่ยงต่ำก่อน แล้วค่อยลงลึก
-- งานเอกสารให้สั้น ชัด มี Impact และรักษาความหมายทางเทคนิค
-- ก่อน push ข้อมูลลง public repo ให้ตัดข้อมูลส่วนตัว ข้อมูลลูกค้า secret และข้อมูลภายในที่ไม่จำเป็นออก
-
-### การติดตั้ง
-
-สามารถติดตั้งเฉพาะ Skill ผ่าน `$skill-installer` หรือ clone repository แล้วคัดลอกทุกโฟลเดอร์ใต้ `skills/` ไปที่ personal skills directory ของ Codex ตามตัวอย่างในหัวข้อ [Installation](#installation)
+**หลังเปลี่ยนชื่อ:** ยืนยันการติดตั้ง Plugin ใหม่ให้สมบูรณ์ก่อนลบ Plugin ชื่อเดิม
+เพื่อไม่ให้ความสามารถที่ใช้งานอยู่หายไป
 
 ---
 
-<a id="repository-status"></a>
-
-## 📌 Repository status
+## Repository status
 
 - **Visibility:** Private
-- **License:** [MIT](LICENSE)
-- **Maintainer:** [TOPTUBBY](https://github.com/TOPTUBBY)
-- **Current skill count:** 15
-- **Knowledge snapshot:** 2026-11-01
-
-Private repository maintained for personal reusable workflows.
-
-
----
-
-## 🔒 Private plugin bundles
-
-A private plugin marketplace and category bundles are available on branch `feature/private-skill-plugins`. See `PLUGIN_BUNDLES.md` on that branch for installation and update instructions.
+- **Default branch:** `main`
+- **Unique Skills:** 55 (15 personal + 39 OpenAI + 1 Cloudflare)
+- **Category Plugins:** 11
+- **Naming:** `personal-*`
+- **Updated:** 2026-11-08

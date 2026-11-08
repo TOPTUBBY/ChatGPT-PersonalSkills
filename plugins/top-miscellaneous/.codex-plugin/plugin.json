@@ -1,6 +1,0 @@
-{
-  "name": "top-miscellaneous",
-  "version": "1.0.0",
-  "description": "Official OpenAI curated skills: TOP Miscellaneous (2 skills).",
-  "skills": "./skills/"
-}

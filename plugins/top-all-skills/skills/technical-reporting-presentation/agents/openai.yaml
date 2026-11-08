@@ -1,5 +1,0 @@
-interface:
-  display_name: "Technical Reporting & Presentation"
-  short_description: "Create concise, impact-focused engineering reports and slides"
-  brand_color: "#EA580C"
-  default_prompt: "Use $technical-reporting-presentation to convert this engineering content into a concise, impact-focused report or slide."

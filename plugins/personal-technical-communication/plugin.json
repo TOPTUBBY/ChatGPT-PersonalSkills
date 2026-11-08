@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "personal-technical-communication",
+  "version": "2.0.0",
+  "description": "Personal Technical Communication skills bundle (3 skills), organized for Codex and ChatGPT.",
+  "author": {
+    "name": "TOPTUBBY"
+  },
+  "repository": "https://github.com/TOPTUBBY/ChatGPT-CodexSkills",
+  "keywords": [
+    "personal",
+    "skills",
+    "codex",
+    "personal-technical-communication"
+  ]
+}

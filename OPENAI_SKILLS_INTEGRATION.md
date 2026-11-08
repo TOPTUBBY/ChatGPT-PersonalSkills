@@ -3,7 +3,7 @@
 ## Scope
 
 This branch packages **39 curated skills** from [openai/skills](https://github.com/openai/skills)
-into **7 additional private plugins**, alongside the existing 5 TOP bundles.
+into **7 upstream category plugins**, alongside the existing 4 personal engineering bundles.
 The OpenAI repository also contains 5 **system skills**; those are managed by Codex itself and
 are not duplicated. Per-skill `LICENSE.txt` and all `scripts/`, `references/`, `assets/`
 are copied without edits whenever present.
@@ -16,7 +16,7 @@ Source-of-truth mapping: [UPSTREAM_SKILLS.json](UPSTREAM_SKILLS.json).
 | TOP Documents & Media | PDF, notebook, speech, transcription, screenshot | 5 |
 | TOP Developer Tools | ASP.NET, ChatGPT apps, Playwright, WinUI, CLI | 8 |
 | TOP Cloud & Deployment | Cloudflare, Netlify, Render, Vercel | 4 |
-| TOP Security & Quality | Threat modeling, code security, Sentry and GitHub review | 6 |
+| Personal Security and Quality | Cloudflare audit, threat modeling, Sentry and code review | 7 |
 | TOP Productivity & Projects | Notion, Linear, planning | 6 |
 | TOP Miscellaneous | Fun and one-off automation | 2 |
 
@@ -26,7 +26,7 @@ This step needs internet access on your Windows PC or an enabled GitHub Actions 
 plus Git and Python 3.
 
 ```powershell
-git clone -b feature/private-skill-plugins https://github.com/TOPTUBBY/ChatGPT-CodexSkills.git
+git clone -b main https://github.com/TOPTUBBY/ChatGPT-CodexSkills.git
 cd ChatGPT-CodexSkills
 powershell -ExecutionPolicy Bypass -File .\scripts\sync-upstream-skills.ps1
 ```
@@ -53,7 +53,7 @@ Then review and publish to your **private** branch:
 git status
 git add plugins .agents/plugins/marketplace.json
 git commit -m "Sync official curated OpenAI skills into private bundles"
-git push origin feature/private-skill-plugins
+git push origin main
 ```
 
 Finally register/upgrade your private marketplace:
@@ -72,7 +72,7 @@ The workflow `.github/workflows/sync-openai-curated-skills.yml` can synchronize 
 generated packages without requiring Python/Git on your work PC. For a private GitHub repository,
 Actions must be enabled and workflow permissions must allow **Read and write** for repository
 contents. Run it from **Actions > Sync OpenAI curated skills > Run workflow**, selecting
-`feature/private-skill-plugins`. Review the resulting commit before installing.
+`main`. Review the resulting commit before installing.
 The workflow also runs when first added to the feature branch; if Actions are disabled,
 use the manual script above.
 

@@ -1,5 +1,0 @@
-interface:
-  display_name: "Engineering Troubleshooting"
-  short_description: "Isolate technical faults with evidence, not trial-and-error"
-  brand_color: "#D97706"
-  default_prompt: "Use $engineering-troubleshooting to diagnose this issue using Define → Collect Evidence → Isolate → Verify → Prevent."

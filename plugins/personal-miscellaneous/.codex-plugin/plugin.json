@@ -1,0 +1,9 @@
+{
+  "name": "personal-miscellaneous",
+  "version": "2.0.0",
+  "description": "Personal Miscellaneous skills bundle (2 skills) with original upstream resources preserved.",
+  "author": {
+    "name": "TOPTUBBY"
+  },
+  "skills": "./skills/"
+}

@@ -1,9 +1,0 @@
-{
-  "name": "top-all-skills",
-  "version": "1.0.0",
-  "description": "Complete private TOP skill suite containing every engineering, embedded, software, automation, documentation, and communication skill in this repository.",
-  "author": {
-    "name": "TOPTUBBY"
-  },
-  "skills": "./skills/"
-}

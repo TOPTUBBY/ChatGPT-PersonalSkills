@@ -1,5 +1,0 @@
-interface:
-  display_name: "Technical Comparison & Selection"
-  short_description: "Choose engineering options from measurable requirements"
-  brand_color: "#4F46E5"
-  default_prompt: "Use $technical-comparison-selection to compare these technical options and recommend the best fit for my application."

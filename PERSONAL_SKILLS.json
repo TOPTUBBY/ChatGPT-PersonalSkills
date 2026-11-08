@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "categories": {
+    "top-engineering-core": [
+      "automotive-can-capl",
+      "engineering-troubleshooting",
+      "electrical-power-lab",
+      "equipment-driver-integration",
+      "switching-power-supply-pcb",
+      "technical-comparison-selection"
+    ],
+    "top-embedded-iot": [
+      "esp32-data-logger-control",
+      "raspberry-pi-linux-troubleshooting",
+      "home-assistant-truenas-iot"
+    ],
+    "top-software-automation": [
+      "software-release-maintenance",
+      "windows-automation-scripting",
+      "test-data-plotting-performance"
+    ],
+    "top-technical-communication": [
+      "engineering-translation-writing",
+      "technical-reporting-presentation",
+      "professional-project-readme"
+    ]
+  }
+}

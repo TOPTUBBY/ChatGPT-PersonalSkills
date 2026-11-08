@@ -4,7 +4,7 @@ Source: https://github.com/cloudflare/security-audit-skill
 
 The standalone skill is **independent** from the existing TOP Security & Quality Personal Plugin.
 The private GitHub branch already carries the complete upstream skill in
-`plugins/top-security-quality/skills/security-audit/`, including its MIT license.
+`plugins/personal-security-and-quality/skills/security-audit/`, including its MIT license.
 
 ## Windows (recommended)
 

@@ -1,0 +1,9 @@
+{
+  "name": "personal-engineering-core",
+  "version": "2.0.0",
+  "description": "Personal Engineering Core skills bundle (6 skills), organized for Codex and ChatGPT.",
+  "author": {
+    "name": "TOPTUBBY"
+  },
+  "skills": "./skills/"
+}

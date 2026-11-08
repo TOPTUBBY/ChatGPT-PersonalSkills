@@ -1,5 +1,0 @@
-interface:
-  display_name: "Engineering Translation & Writing"
-  short_description: "Polish Thai/English technical communication accurately"
-  brand_color: "#0284C7"
-  default_prompt: "Use $engineering-translation-writing to translate or polish this engineering text while preserving technical meaning."

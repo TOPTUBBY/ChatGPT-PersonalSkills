@@ -1,5 +1,0 @@
-interface:
-  display_name: "Switching Power Supply PCB"
-  short_description: "Buck regulator, ripple, and two-layer PCB troubleshooting"
-  brand_color: "#008BD2"
-  default_prompt: "Use $switching-power-supply-pcb to review this power supply schematic, component ratings, PCB layout, and test plan."

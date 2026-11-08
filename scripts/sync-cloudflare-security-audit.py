@@ -7,7 +7,7 @@ import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-TARGET = ROOT / "plugins/top-security-quality"
+TARGET = ROOT / "plugins/personal-security-and-quality"
 SOURCE_URL = "https://github.com/cloudflare/security-audit-skill.git"
 
 def main():

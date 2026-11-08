@@ -1,5 +1,0 @@
-interface:
-  display_name: "Software Release Maintenance"
-  short_description: "Fix, test, document, and package existing software safely"
-  brand_color: "#334155"
-  default_prompt: "Use $software-release-maintenance to inspect this repository, implement the fix, regression-test it, and update release documentation."

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "personal-developer-tools",
+  "version": "2.0.0",
+  "description": "Personal Developer Tools skills bundle (8 skills) with original upstream resources preserved.",
+  "author": {
+    "name": "TOPTUBBY"
+  },
+  "repository": "https://github.com/TOPTUBBY/ChatGPT-CodexSkills",
+  "keywords": [
+    "personal",
+    "skills",
+    "codex",
+    "personal-developer-tools"
+  ]
+}

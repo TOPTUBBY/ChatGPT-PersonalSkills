@@ -1,0 +1,9 @@
+{
+  "name": "personal-embedded-and-iot",
+  "version": "2.0.0",
+  "description": "Personal Embedded and IoT skills bundle (3 skills), organized for Codex and ChatGPT.",
+  "author": {
+    "name": "TOPTUBBY"
+  },
+  "skills": "./skills/"
+}

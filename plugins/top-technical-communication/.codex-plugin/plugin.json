@@ -1,9 +1,0 @@
-{
-  "name": "top-technical-communication",
-  "version": "1.0.0",
-  "description": "Technical writing, Thai-English engineering communication, presentations, reports, and professional project README workflows.",
-  "author": {
-    "name": "TOPTUBBY"
-  },
-  "skills": "./skills/"
-}

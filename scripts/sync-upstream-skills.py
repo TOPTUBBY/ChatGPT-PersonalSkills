@@ -103,7 +103,7 @@ def main():
         existing["plugins"] = keep + add
         MARKETPLACE.write_text(json.dumps(existing, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         print(f"Generated {len(mapping)} plugins, {len(all_names)} skills, upstream {upstream_sha}")
-        print("Next: review 'git status' and commit changes to feature/private-skill-plugins.")
+        print("Next: review 'git status' and commit changes to main.")
 
 if __name__ == "__main__":
     main()

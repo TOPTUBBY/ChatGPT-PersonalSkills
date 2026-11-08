@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "personal-productivity-and-projects",
+  "version": "2.0.0",
+  "description": "Personal Productivity and Projects skills bundle (6 skills) with original upstream resources preserved.",
+  "author": {
+    "name": "TOPTUBBY"
+  },
+  "repository": "https://github.com/TOPTUBBY/ChatGPT-CodexSkills",
+  "keywords": [
+    "personal",
+    "skills",
+    "codex",
+    "personal-productivity-and-projects"
+  ]
+}

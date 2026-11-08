@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "personal-engineering-core",
+  "version": "2.0.0",
+  "description": "Personal Engineering Core skills bundle (6 skills), organized for Codex and ChatGPT.",
+  "author": {
+    "name": "TOPTUBBY"
+  },
+  "repository": "https://github.com/TOPTUBBY/ChatGPT-CodexSkills",
+  "keywords": [
+    "personal",
+    "skills",
+    "codex",
+    "personal-engineering-core"
+  ]
+}

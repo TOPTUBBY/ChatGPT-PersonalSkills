@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "personal-cloud-and-deployment",
+  "version": "2.0.0",
+  "description": "Personal Cloud and Deployment skills bundle (4 skills) with original upstream resources preserved.",
+  "author": {
+    "name": "TOPTUBBY"
+  },
+  "repository": "https://github.com/TOPTUBBY/ChatGPT-CodexSkills",
+  "keywords": [
+    "personal",
+    "skills",
+    "codex",
+    "personal-cloud-and-deployment"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "personal-productivity-and-projects",
+  "version": "2.0.0",
+  "description": "Personal Productivity and Projects skills bundle (6 skills) with original upstream resources preserved.",
+  "author": {
+    "name": "TOPTUBBY"
+  },
+  "skills": "./skills/"
+}

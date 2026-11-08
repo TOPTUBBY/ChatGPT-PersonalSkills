@@ -1,5 +1,0 @@
-interface:
-  display_name: "Electrical Power Lab"
-  short_description: "Analyze 3-phase, regeneration, harmonics, and protection"
-  brand_color: "#DC2626"
-  default_prompt: "Use $electrical-power-lab to analyze this lab power or protection issue safely and systematically."

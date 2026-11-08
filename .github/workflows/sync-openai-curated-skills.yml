@@ -2,7 +2,7 @@ name: Sync curated and Cloudflare security skills
 on:
   workflow_dispatch:
   push:
-    branches: [feature/private-skill-plugins]
+    branches: [main]
     paths:
       - 'UPSTREAM_SKILLS.json'
       - 'scripts/sync-upstream-skills.py'
@@ -14,25 +14,27 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout private branch
+      - name: Checkout canonical main
         uses: actions/checkout@v4
         with:
-          ref: feature/private-skill-plugins
+          ref: main
           persist-credentials: true
       - name: Sync upstream curated skills
         run: python3 scripts/sync-upstream-skills.py
       - name: Sync Cloudflare security audit skill
         run: python3 scripts/sync-cloudflare-security-audit.py
-      - name: Check Cloudflare audit validators
+      - name: Validate unique skill categories
+        run: python3 scripts/install-standalone-skills.py --all --dry-run
+      - name: Run Cloudflare validators
         run: |
-          cd plugins/top-security-quality/skills/security-audit
+          cd plugins/personal-security-and-quality/skills/security-audit
           node --test validate-findings.test.cjs validate-coverage-ledger.test.cjs
-      - name: Commit generated plugin bundles
+      - name: Commit refreshed upstream packages
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add plugins .agents/plugins/marketplace.json
           if ! git diff --cached --quiet; then
-            git commit -m "Sync OpenAI and Cloudflare security skills into private marketplace"
-            git push origin HEAD:feature/private-skill-plugins
+            git commit -m "Sync official upstream skills in personal marketplace"
+            git push origin HEAD:main
           fi

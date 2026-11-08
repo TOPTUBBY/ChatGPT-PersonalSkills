@@ -6,7 +6,7 @@
   "notes": "Curated skills are copied with their upstream LICENSE.txt, scripts and references. System skills are intentionally excluded because Codex installs them itself. Run sync to materialize local plugin bundles.",
   "categories": [
     {
-      "name": "top-design-ux",
+      "name": "personal-design-and-ux",
       "displayName": "TOP Design & UX",
       "skills": [
         "figma",
@@ -20,7 +20,7 @@
       ]
     },
     {
-      "name": "top-documents-media",
+      "name": "personal-documents-and-media",
       "displayName": "TOP Documents & Media",
       "skills": [
         "pdf",
@@ -31,7 +31,7 @@
       ]
     },
     {
-      "name": "top-developer-tools",
+      "name": "personal-developer-tools",
       "displayName": "TOP Developer Tools",
       "skills": [
         "aspnet-core",
@@ -45,7 +45,7 @@
       ]
     },
     {
-      "name": "top-cloud-deployment",
+      "name": "personal-cloud-and-deployment",
       "displayName": "TOP Cloud & Deployment",
       "skills": [
         "cloudflare-deploy",
@@ -55,7 +55,7 @@
       ]
     },
     {
-      "name": "top-security-quality",
+      "name": "personal-security-and-quality",
       "displayName": "TOP Security & Quality",
       "skills": [
         "security-best-practices",
@@ -67,7 +67,7 @@
       ]
     },
     {
-      "name": "top-productivity-projects",
+      "name": "personal-productivity-and-projects",
       "displayName": "TOP Productivity & Projects",
       "skills": [
         "define-goal",
@@ -79,7 +79,7 @@
       ]
     },
     {
-      "name": "top-miscellaneous",
+      "name": "personal-miscellaneous",
       "displayName": "TOP Miscellaneous",
       "skills": [
         "hatch-pet",

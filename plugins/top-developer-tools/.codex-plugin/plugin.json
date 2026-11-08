@@ -1,6 +1,0 @@
-{
-  "name": "top-developer-tools",
-  "version": "1.0.0",
-  "description": "Official OpenAI curated skills: TOP Developer Tools (8 skills).",
-  "skills": "./skills/"
-}

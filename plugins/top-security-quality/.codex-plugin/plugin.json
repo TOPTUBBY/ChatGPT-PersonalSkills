@@ -1,6 +1,0 @@
-{
-  "name": "top-security-quality",
-  "version": "1.1.0",
-  "description": "Security and quality skills including Cloudflare's full source-auditing workflow, OpenAI security guidance, CI and monitoring.",
-  "skills": "./skills/"
-}
