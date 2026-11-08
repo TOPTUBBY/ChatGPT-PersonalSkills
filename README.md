@@ -84,7 +84,7 @@ Clone the private repository (you need GitHub access):
 
 ```powershell
 git clone https://github.com/TOPTUBBY/ChatGPT-PersonalSkills.git
-cd ChatGPT-CodexSkills
+cd ChatGPT-PersonalSkills
 ```
 
 **Codex Standalone Skills (Python 3):**
