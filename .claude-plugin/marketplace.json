@@ -1,0 +1,64 @@
+{
+  "name": "personal-skills-marketplace",
+  "owner": {
+    "name": "TOPTUBBY"
+  },
+  "description": "Private personal skill marketplace shared across Claude chat, Cowork, and Code.",
+  "plugins": [
+    {
+      "name": "personal-engineering-core",
+      "source": "./plugins/personal-engineering-core",
+      "description": "Personal engineering core skills"
+    },
+    {
+      "name": "personal-embedded-and-iot",
+      "source": "./plugins/personal-embedded-and-iot",
+      "description": "Personal embedded and iot skills"
+    },
+    {
+      "name": "personal-software-and-automation",
+      "source": "./plugins/personal-software-and-automation",
+      "description": "Personal software and automation skills"
+    },
+    {
+      "name": "personal-technical-communication",
+      "source": "./plugins/personal-technical-communication",
+      "description": "Personal technical communication skills"
+    },
+    {
+      "name": "personal-design-and-ux",
+      "source": "./plugins/personal-design-and-ux",
+      "description": "Personal design and ux skills"
+    },
+    {
+      "name": "personal-documents-and-media",
+      "source": "./plugins/personal-documents-and-media",
+      "description": "Personal documents and media skills"
+    },
+    {
+      "name": "personal-developer-tools",
+      "source": "./plugins/personal-developer-tools",
+      "description": "Personal developer tools skills"
+    },
+    {
+      "name": "personal-cloud-and-deployment",
+      "source": "./plugins/personal-cloud-and-deployment",
+      "description": "Personal cloud and deployment skills"
+    },
+    {
+      "name": "personal-security-and-quality",
+      "source": "./plugins/personal-security-and-quality",
+      "description": "Personal security and quality skills"
+    },
+    {
+      "name": "personal-productivity-and-projects",
+      "source": "./plugins/personal-productivity-and-projects",
+      "description": "Personal productivity and projects skills"
+    },
+    {
+      "name": "personal-miscellaneous",
+      "source": "./plugins/personal-miscellaneous",
+      "description": "Personal miscellaneous skills"
+    }
+  ]
+}

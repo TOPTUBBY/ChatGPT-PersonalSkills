@@ -2,16 +2,16 @@
 
 # 🧩 Personal Skills Marketplace
 
-**Private reusable skills for ChatGPT and Codex**
+**Private reusable skills for ChatGPT, Codex, Claude, Cowork, Gemini, Gems and compatible AI agents**
 
 **55 unique skills · 11 category plugins · zero duplicate skill sources**
 
-[![Private](https://img.shields.io/badge/Repository-Private-111827?style=for-the-badge)](https://github.com/TOPTUBBY/ChatGPT-CodexSkills)
+[![Private](https://img.shields.io/badge/Repository-Private-111827?style=for-the-badge)](https://github.com/TOPTUBBY/ChatGPT-PersonalSkills)
 [![Skills](https://img.shields.io/badge/Unique%20Skills-55-2563EB?style=for-the-badge)](#catalog)
 [![Plugins](https://img.shields.io/badge/Category%20Plugins-11-0EA5E9?style=for-the-badge)](#catalog)
 [![Codex](https://img.shields.io/badge/Codex-Skills-6B7280?style=for-the-badge)](https://developers.openai.com/codex/skills/)
 
-[English](#english) · [ภาษาไทย](#ภาษาไทย) · [Install](#installation) · [Catalog](#catalog) · [Updates](#updates)
+[English](#english) · [ภาษาไทย](#ภาษาไทย) · [Multi-AI Guide](MULTI_AI_GUIDE.md) · [Install](#installation) · [Catalog](#catalog) · [Updates](#updates)
 
 </div>
 
@@ -26,6 +26,36 @@ This private repository contains **55 distinct reusable Skills** organized into 
 The older branch `main` contained 15 standalone Skills in `skills/`. Their 35 files were compared with the category-plugin copies using Git blob hashes, and **all matched exactly**. The redundant root `skills/` directory and `top-all-skills` aggregate were retired from the current tree; Git history retains every revision. The replacement **Personal All Skills** account plugin is an optional deployment package, not a duplicate tracked source bundle.
 
 <a id="catalog"></a>
+
+
+## 🌐 Multi-AI compatibility
+
+This repository is now **vendor-neutral at the skill-source layer**. The 55 unique Skills remain in their canonical category folders. Platform-specific installers and exports are generated without committing duplicate skill trees.
+
+| Provider | Integration | How to use |
+|---|---|---|
+| ChatGPT / Codex | Existing OpenAI Plugins and Agent Skills | `scripts/register-private-marketplace.ps1` or `--target codex` |
+| Claude Code | Claude marketplace + standalone Agent Skills | `.claude-plugin/marketplace.json` or `--target claude-code` |
+| Claude Web / Cowork | ZIP uploads, skills / category plugins | `--target claude-web` or `--target claude-plugin` |
+| Gemini CLI | Agent Skills | `--target gemini-cli` |
+| Gemini Gems | Instructions and Knowledge pack (manual upload) | `--target gem` |
+| Other compatible agents | Standard Agent Skills folder | `--target agents` |
+
+**Windows examples:**
+
+```powershell
+py -3 scripts/ai-skills.py --target claude-code --all --dry-run
+py -3 scripts/ai-skills.py --target claude-code --category personal-engineering-core
+py -3 scripts/ai-skills.py --target gemini-cli --all
+py -3 scripts/ai-skills.py --target claude-plugin --category personal-security-and-quality
+py -3 scripts/ai-skills.py --target gem --category personal-design-and-ux
+```
+
+**Claude Code marketplace:** after cloning, run `/plugin marketplace add <local-path-to-repo>` and then `/plugin install personal-engineering-core@personal-skills-marketplace` in Claude Code. The marketplace source must be accessible to Claude; a private GitHub URL alone is not sufficient if authentication is unavailable.
+
+**Important:** Claude/Gemini accounts and ChatGPT accounts are independent. Generated packages do not install themselves into web accounts. Gems are instruction/knowledge configurations, not executable Agent Skills. Capabilities and file-upload limits vary by provider. See the detailed [Multi-AI Guide](MULTI_AI_GUIDE.md).
+
+---
 
 ## Catalog
 
@@ -53,7 +83,7 @@ Five OpenAI System Skills are intentionally **not** mirrored or overwritten.
 Clone the private repository (you need GitHub access):
 
 ```powershell
-git clone https://github.com/TOPTUBBY/ChatGPT-CodexSkills.git
+git clone https://github.com/TOPTUBBY/ChatGPT-PersonalSkills.git
 cd ChatGPT-CodexSkills
 ```
 
@@ -90,7 +120,7 @@ and a Standalone Skill in one runtime scope if you want to avoid duplicate names
 On Windows, run `powershell -ExecutionPolicy Bypass -File .\\scripts\\migrate-codex.ps1 -Mode Plugin` for marketplace updates, or `-Mode Standalone` for a fresh install of the 55 distinct Skill folders. This script cannot remove obsolete old-name Plugins from an unconnected PC automatically.
 
 **ChatGPT Web:** Personal Plugins are stored independently from GitHub. Newly created
-`personal-*` ChatGPT Plugins do **not** automatically remove old `top-*` account Plugins.
+`personal-*` ChatGPT Plugins are independent from old account releases; the older TOP-named plugins have been manually cleaned up.
 Changes to this repo will also not automatically update existing account Plugins.
 
 <a id="updates"></a>
@@ -118,7 +148,7 @@ Do not add back root `skills/` or duplicate it into another category.
 ### Structure
 
 ```text
-ChatGPT-CodexSkills/
+ChatGPT-PersonalSkills/
 ├── .agents/plugins/marketplace.json
 ├── .github/workflows/sync-openai-curated-skills.yml
 ├── plugins/
@@ -179,3 +209,4 @@ Repository นี้เป็นคลังส่วนตัวรวม **55 
 - **Category Plugins:** 11
 - **Naming:** `personal-*`
 - **Updated:** 2026-11-08
+- **Platform adapters:** ChatGPT/Codex, Claude Code/Cowork/Web, Gemini CLI/Gems, standard Agent Skills

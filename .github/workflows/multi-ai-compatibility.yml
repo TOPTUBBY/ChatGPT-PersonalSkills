@@ -1,0 +1,48 @@
+name: Multi-AI skills compatibility
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, feature/multi-ai-support]
+    paths:
+      - 'scripts/ai-skills.py'
+      - 'plugins/**/.claude-plugin/plugin.json'
+      - '.claude-plugin/marketplace.json'
+      - '.github/workflows/multi-ai-compatibility.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check catalog uniqueness and dry runs
+        run: |
+          python3 scripts/ai-skills.py --target claude-code --all --dry-run
+          python3 scripts/ai-skills.py --target gemini-cli --all --dry-run
+      - name: Produce test exports
+        run: |
+          python3 scripts/ai-skills.py --target claude-web --skill automotive-can-capl --output /tmp/skillexports
+          python3 scripts/ai-skills.py --target claude-plugin --category personal-engineering-core --output /tmp/pluginexports
+          python3 scripts/ai-skills.py --target gem --category personal-engineering-core --output /tmp/gemexports
+      - name: Validate manifests and exports
+        run: |
+          python3 - <<'PY'
+          import json, zipfile
+          from pathlib import Path
+          repo = Path(".")
+          market=json.loads((repo/".claude-plugin/marketplace.json").read_text())
+          assert len(market["plugins"]) == 11
+          for p in market["plugins"]:
+              root=repo/p["source"]
+              data=json.loads((root/".claude-plugin/plugin.json").read_text())
+              assert data["name"]==p["name"]
+              assert (root/"skills").is_dir()
+          assert len(list((repo/"plugins").glob("*/skills/*/SKILL.md")))==55
+          with zipfile.ZipFile("/tmp/skillexports/automotive-can-capl.zip") as z:
+              assert "automotive-can-capl/SKILL.md" in z.namelist()
+          with zipfile.ZipFile("/tmp/pluginexports/personal-engineering-core.zip") as z:
+              assert "personal-engineering-core/.claude-plugin/plugin.json" in z.namelist()
+              assert "personal-engineering-core/skills/automotive-can-capl/SKILL.md" in z.namelist()
+          assert (Path("/tmp/gemexports/personal-engineering-core/GEM_INSTRUCTIONS.md")).exists()
+          print("Multi-AI compatibility checks passed")
+          PY
