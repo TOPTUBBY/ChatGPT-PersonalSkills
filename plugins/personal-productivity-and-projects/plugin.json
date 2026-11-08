@@ -1,16 +1,16 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "personal-productivity-and-projects",
-  "version": "2.0.0",
-  "description": "Personal Productivity and Projects skills bundle (6 skills) with original upstream resources preserved.",
+  "version": "1.0.0",
+  "description": "Official OpenAI curated skills: TOP Productivity & Projects (6 skills).",
   "author": {
-    "name": "TOPTUBBY"
+    "name": "OpenAI (skills authors); TOPTUBBY (private packaging)"
   },
-  "repository": "https://github.com/TOPTUBBY/ChatGPT-CodexSkills",
+  "repository": "https://github.com/openai/skills",
   "keywords": [
-    "personal",
+    "openai",
     "skills",
-    "codex",
-    "personal-productivity-and-projects"
+    "private",
+    "curated"
   ]
 }

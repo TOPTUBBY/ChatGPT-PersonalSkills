@@ -1,9 +1,6 @@
 {
   "name": "personal-documents-and-media",
-  "version": "2.0.0",
-  "description": "Personal Documents and Media skills bundle (5 skills), organized for Codex and ChatGPT.",
-  "author": {
-    "name": "TOPTUBBY"
-  },
+  "version": "1.0.0",
+  "description": "Official OpenAI curated skills: TOP Documents & Media (5 skills).",
   "skills": "./skills/"
 }

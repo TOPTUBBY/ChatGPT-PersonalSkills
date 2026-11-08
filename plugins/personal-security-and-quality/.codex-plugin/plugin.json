@@ -1,9 +1,6 @@
 {
   "name": "personal-security-and-quality",
-  "version": "2.0.0",
-  "description": "Personal Security and Quality skills bundle (7 skills) with original upstream resources preserved.",
-  "author": {
-    "name": "TOPTUBBY"
-  },
+  "version": "1.1.0",
+  "description": "Security and quality skills including Cloudflare's full source-auditing workflow, OpenAI security guidance, CI and monitoring.",
   "skills": "./skills/"
 }

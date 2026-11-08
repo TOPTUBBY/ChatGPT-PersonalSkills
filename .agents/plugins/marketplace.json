@@ -76,7 +76,7 @@
       },
       "category": "Productivity",
       "interface": {
-        "displayName": "Personal Design and UX"
+        "displayName": "TOP Design & UX"
       }
     },
     {
@@ -91,7 +91,7 @@
       },
       "category": "Productivity",
       "interface": {
-        "displayName": "Personal Documents and Media"
+        "displayName": "TOP Documents & Media"
       }
     },
     {
@@ -104,9 +104,9 @@
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
-      "category": "Developer Tools",
+      "category": "Productivity",
       "interface": {
-        "displayName": "Personal Developer Tools"
+        "displayName": "TOP Developer Tools"
       }
     },
     {
@@ -119,9 +119,9 @@
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
-      "category": "Developer Tools",
+      "category": "Productivity",
       "interface": {
-        "displayName": "Personal Cloud and Deployment"
+        "displayName": "TOP Cloud & Deployment"
       }
     },
     {
@@ -134,9 +134,9 @@
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
-      "category": "Developer Tools",
+      "category": "Productivity",
       "interface": {
-        "displayName": "Personal Security and Quality"
+        "displayName": "TOP Security & Quality"
       }
     },
     {
@@ -151,7 +151,7 @@
       },
       "category": "Productivity",
       "interface": {
-        "displayName": "Personal Productivity and Projects"
+        "displayName": "TOP Productivity & Projects"
       }
     },
     {
@@ -166,7 +166,7 @@
       },
       "category": "Productivity",
       "interface": {
-        "displayName": "Personal Miscellaneous"
+        "displayName": "TOP Miscellaneous"
       }
     }
   ]

@@ -1,16 +1,16 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "personal-design-and-ux",
-  "version": "2.0.0",
-  "description": "Personal Design and UX skills bundle (8 skills), organized for Codex and ChatGPT.",
+  "version": "1.0.0",
+  "description": "Official OpenAI curated skills: TOP Design & UX (8 skills).",
   "author": {
-    "name": "TOPTUBBY"
+    "name": "OpenAI (skills authors); TOPTUBBY (private packaging)"
   },
-  "repository": "https://github.com/TOPTUBBY/ChatGPT-CodexSkills",
+  "repository": "https://github.com/openai/skills",
   "keywords": [
-    "personal",
+    "openai",
     "skills",
-    "codex",
-    "personal-design-and-ux"
+    "private",
+    "curated"
   ]
 }

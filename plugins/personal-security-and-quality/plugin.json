@@ -1,16 +1,18 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "personal-security-and-quality",
-  "version": "2.0.0",
-  "description": "Personal Security and Quality skills bundle (7 skills) with original upstream resources preserved.",
+  "version": "1.1.0",
+  "description": "Security and quality skills including Cloudflare's full source-auditing workflow, OpenAI security guidance, CI and monitoring.",
   "author": {
-    "name": "TOPTUBBY"
+    "name": "OpenAI (skills authors); TOPTUBBY (private packaging)"
   },
-  "repository": "https://github.com/TOPTUBBY/ChatGPT-CodexSkills",
+  "repository": "https://github.com/openai/skills",
   "keywords": [
-    "personal",
-    "skills",
-    "codex",
-    "personal-security-and-quality"
+    "security",
+    "audit",
+    "cloudflare",
+    "openai",
+    "quality",
+    "private"
   ]
 }

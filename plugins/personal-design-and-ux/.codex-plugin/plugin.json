@@ -1,9 +1,6 @@
 {
   "name": "personal-design-and-ux",
-  "version": "2.0.0",
-  "description": "Personal Design and UX skills bundle (8 skills), organized for Codex and ChatGPT.",
-  "author": {
-    "name": "TOPTUBBY"
-  },
+  "version": "1.0.0",
+  "description": "Official OpenAI curated skills: TOP Design & UX (8 skills).",
   "skills": "./skills/"
 }

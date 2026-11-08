@@ -1,16 +1,16 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "personal-documents-and-media",
-  "version": "2.0.0",
-  "description": "Personal Documents and Media skills bundle (5 skills), organized for Codex and ChatGPT.",
+  "version": "1.0.0",
+  "description": "Official OpenAI curated skills: TOP Documents & Media (5 skills).",
   "author": {
-    "name": "TOPTUBBY"
+    "name": "OpenAI (skills authors); TOPTUBBY (private packaging)"
   },
-  "repository": "https://github.com/TOPTUBBY/ChatGPT-CodexSkills",
+  "repository": "https://github.com/openai/skills",
   "keywords": [
-    "personal",
+    "openai",
     "skills",
-    "codex",
-    "personal-documents-and-media"
+    "private",
+    "curated"
   ]
 }
