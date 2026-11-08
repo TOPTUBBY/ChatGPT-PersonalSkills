@@ -1,5 +1,5 @@
 param(
-  [string]$Repo = "TOPTUBBY/ChatGPT-CodexSkills",
+  [string]$Repo = "TOPTUBBY/ChatGPT-PersonalSkills",
   [string]$Ref = "main"
 )
 $ErrorActionPreference = "Stop"
@@ -8,7 +8,7 @@ if (-not (Get-Command codex -ErrorAction SilentlyContinue)) {
 }
 Write-Host "Registering Personal Skills Marketplace marketplace..." -ForegroundColor Cyan
 $existing = (& codex plugin marketplace list 2>&1 | Out-String)
-if ($existing -match "personal-skills-marketplace|ChatGPT-CodexSkills") {
+if ($existing -match "personal-skills-marketplace|ChatGPT-PersonalSkills") {
   Write-Host "Marketplace appears to be registered. Upgrading instead..." -ForegroundColor Yellow
   & codex plugin marketplace upgrade
 } else {

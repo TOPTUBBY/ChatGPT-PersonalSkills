@@ -1,6 +1,6 @@
 # Migrating Codex after the Personal rename
 
-Repository: `TOPTUBBY/ChatGPT-CodexSkills` (`main`).
+Repository: `TOPTUBBY/ChatGPT-PersonalSkills` (`main`).
 
 The 11 source category Plugin packages now use the `personal-*` namespace.
 The underlying 55 unique Skill names were intentionally not changed because
@@ -9,8 +9,8 @@ they already use domain-based names and existing project references depend on th
 ## Windows
 
 ```powershell
-git clone https://github.com/TOPTUBBY/ChatGPT-CodexSkills.git
-cd ChatGPT-CodexSkills
+git clone https://github.com/TOPTUBBY/ChatGPT-PersonalSkills.git
+cd ChatGPT-PersonalSkills
 
 # Update private plugin marketplace in a Codex CLI that supports plugin commands
 powershell -ExecutionPolicy Bypass -File .\scripts\migrate-codex.ps1 -Mode Plugin

@@ -26,8 +26,8 @@ This step needs internet access on your Windows PC or an enabled GitHub Actions 
 plus Git and Python 3.
 
 ```powershell
-git clone -b main https://github.com/TOPTUBBY/ChatGPT-CodexSkills.git
-cd ChatGPT-CodexSkills
+git clone -b main https://github.com/TOPTUBBY/ChatGPT-PersonalSkills.git
+cd ChatGPT-PersonalSkills
 powershell -ExecutionPolicy Bypass -File .\scripts\sync-upstream-skills.ps1
 ```
 
