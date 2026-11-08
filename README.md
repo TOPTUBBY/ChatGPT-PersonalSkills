@@ -86,6 +86,9 @@ powershell -ExecutionPolicy Bypass -File .\scripts\register-private-marketplace.
 Choose the category plugins you need. Do not install the same Skill as a Plugin
 and a Standalone Skill in one runtime scope if you want to avoid duplicate names.
 
+**Migrating an existing Codex installation:** see [CODEX_MIGRATION.md](CODEX_MIGRATION.md).
+On Windows, run `powershell -ExecutionPolicy Bypass -File .\\scripts\\migrate-codex.ps1 -Mode Plugin` for marketplace updates, or `-Mode Standalone` for a fresh install of the 55 distinct Skill folders. This script cannot remove obsolete old-name Plugins from an unconnected PC automatically.
+
 **ChatGPT Web:** Personal Plugins are stored independently from GitHub. Newly created
 `personal-*` ChatGPT Plugins do **not** automatically remove old `top-*` account Plugins.
 Changes to this repo will also not automatically update existing account Plugins.
