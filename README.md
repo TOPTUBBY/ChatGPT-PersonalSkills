@@ -210,3 +210,8 @@ Repository นี้เป็นคลังส่วนตัวรวม **55 
 - **Naming:** `personal-*`
 - **Updated:** 2026-11-08
 - **Platform adapters:** ChatGPT/Codex, Claude Code/Cowork/Web, Gemini CLI/Gems, standard Agent Skills
+
+
+## Knowledge maintenance — 2026-11-15
+
+The existing 55-skill / 11-plugin canonical catalog is unchanged. Four reusable reference notes were added under existing skills, covering Gitea organization authentication and local TLS trust, reliable offline web launchers, current-limit potentiometer diagnosis, and older-Android local AI voice clients. References are intentionally generic: no credentials, private addresses, serial numbers, personal data, or proprietary project details. These notes supplement rather than replace existing SKILL.md workflows.
